@@ -4,6 +4,7 @@ import org.happyfire.blog.admin.model.params.PageParam;
 import org.happyfire.blog.admin.pojo.Permission;
 import org.happyfire.blog.admin.pojo.Sys_user;
 import org.happyfire.blog.admin.service.PermissionService;
+import org.happyfire.blog.admin.service.SecurityUserService;
 import org.happyfire.blog.admin.service.Sys_userService;
 import org.happyfire.blog.admin.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class adminController {
 
     @Autowired
     private Sys_userService sysUserService;
+
 
     @PostMapping("permission/permissionList")
     public Result listPermission(@RequestBody PageParam pageParam) {
@@ -56,5 +58,10 @@ public class adminController {
     @GetMapping("user/delete/{id}")
     public Result userDelete(@PathVariable("id") Long id) {
         return sysUserService.delete(id);
+    }
+
+    @PostMapping("user/userInfo")
+    public Result getUserInfo(){
+        return sysUserService.getUserInfo();
     }
 }

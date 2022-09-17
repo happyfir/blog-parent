@@ -153,7 +153,7 @@
       <workItem from="1663060333729" duration="635000" />
       <workItem from="1663121555492" duration="2294000" />
       <workItem from="1663377860635" duration="16626000" />
-      <workItem from="1663426277752" duration="2852000" />
+      <workItem from="1663426277752" duration="5377000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -183,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663420656580</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加用户管理页面">
+      <created>1663429327903</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663429327903</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +210,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交" />
     <MESSAGE value="测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+    <MESSAGE value="添加用户管理页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加用户管理页面" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/Sys_userServiceImpl.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/Sys_userServiceImpl.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

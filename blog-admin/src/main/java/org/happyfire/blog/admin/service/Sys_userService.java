@@ -10,4 +10,6 @@ public interface Sys_userService {
     Result listUser(PageParam pageParam);
 
     Result delete(Long id);
+
+    Result getUserInfo();
 }

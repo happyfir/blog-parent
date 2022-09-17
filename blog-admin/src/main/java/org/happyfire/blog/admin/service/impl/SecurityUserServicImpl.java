@@ -3,6 +3,7 @@ package org.happyfire.blog.admin.service.impl;
 import org.happyfire.blog.admin.pojo.Admin;
 import org.happyfire.blog.admin.service.AdminService;
 import org.happyfire.blog.admin.service.SecurityUserService;
+import org.happyfire.blog.admin.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
