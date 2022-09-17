@@ -39,17 +39,24 @@
             <div class="filter-container">
                 <el-input placeholder="用户信息" v-model="pagination.queryString" style="width: 200px;" class="filter-item"></el-input>
                 <el-button @click="findSearchPage()" class="dalfBut">查询</el-button>
-                <el-button type="primary" class="butT" @click="handleCreate()">新建用户</el-button>
+<!--                <el-button type="primary" class="butT" @click="handleCreate()">新建用户</el-button>-->
             </div>
             <el-table size="small" current-row-key="id" :data="dataList" stripe highlight-current-row>
-                <el-table-column  align="center" label="序号" prop="id"></el-table-column>
+<!--                <el-table-column  align="center" label="序号" prop="id"></el-table-column>-->
                 <el-table-column label="编号" align="center" prop="id">
                 </el-table-column>
-                <el-table-column label="名称" align="center" prop="name">
+                <el-table-column label="账号" align="center" prop="account">
                 </el-table-column>
-                <el-table-column label="路径" align="center" prop="path">
                 </el-table-column>
-                <el-table-column label="描述" align="center" prop="description">
+                <el-table-column label="昵称" align="center" prop="nickname">
+                </el-table-column>
+                <el-table-column label="权限" align="center" prop="admin">
+                </el-table-column>
+                </el-table-column>
+                <el-table-column label="邮箱" align="center" prop="email">
+                </el-table-column>
+                </el-table-column>
+                <el-table-column label="电话号码" align="center" prop="mobilePhoneNumber">
                 </el-table-column>
                 <el-table-column label="操作" align="center">
                     <template slot-scope="scope">
@@ -69,37 +76,44 @@
                 </el-pagination>
             </div>
             <!-- 新增标签弹层 -->
-            <div class="add-form">
-                <el-dialog title="新增" :visible.sync="dialogFormVisible">
-                    <el-form ref="dataAddForm" :model="formData" :rules="rules" label-position="right" label-width="100px">
-                        <el-row>
-                            <el-col >
-                                <el-form-item label="名称" prop="name">
-                                    <el-input  v-model="formData.name"/>
-                                </el-form-item>
-                            </el-col>
-                        </el-row>
-                        <el-row>
-                            <el-col >
-                                <el-form-item label="路径" prop="path">
-                                    <el-input  v-model="formData.path"/>
-                                </el-form-item>
-                            </el-col>
-                        </el-row>
-                        <el-row>
-                            <el-col >
-                                <el-form-item label="描述" prop="description">
-                                    <el-input  v-model="formData.description"/>
-                                </el-form-item>
-                            </el-col>
-                        </el-row>
-                    </el-form>
-                    <div slot="footer" class="dialog-footer">
-                        <el-button @click="dialogFormVisible = false">取消</el-button>
-                        <el-button type="primary" @click="handleAdd()">确定</el-button>
-                    </div>
-                </el-dialog>
-            </div>
+<!--            <div class="add-form">-->
+<!--                <el-dialog title="新增" :visible.sync="dialogFormVisible">-->
+<!--                    <el-form ref="dataAddForm" :model="formData" :rules="rules" label-position="right" label-width="100px">-->
+<!--                        <el-row>-->
+<!--                            <el-col >-->
+<!--                                <el-form-item label="昵称" prop="nickname">-->
+<!--                                    <el-input  v-model="formData.nickname"/>-->
+<!--                                </el-form-item>-->
+<!--                            </el-col>-->
+<!--                        </el-row>-->
+<!--                        <el-row>-->
+<!--                            <el-col >-->
+<!--                                <el-form-item label="权限" prop="admin">-->
+<!--                                    <el-input  v-model="formData.admin"/>-->
+<!--                                </el-form-item>-->
+<!--                            </el-col>-->
+<!--                        </el-row>-->
+<!--                        <el-row>-->
+<!--                            <el-col >-->
+<!--                                <el-form-item label="邮箱" prop="email">-->
+<!--                                    <el-input  v-model="formData.email"/>-->
+<!--                                </el-form-item>-->
+<!--                            </el-col>-->
+<!--                        </el-row>-->
+<!--                        <el-row>-->
+<!--                            <el-col >-->
+<!--                                <el-form-item label="电话号码" prop="mobile_phone_number">-->
+<!--                                    <el-input  v-model="formData.mobile_phone_number"/>-->
+<!--                                </el-form-item>-->
+<!--                            </el-col>-->
+<!--                        </el-row>-->
+<!--                    </el-form>-->
+<!--                    <div slot="footer" class="dialog-footer">-->
+<!--                        <el-button @click="dialogFormVisible = false">取消</el-button>-->
+<!--                        <el-button type="primary" @click="handleAdd()">确定</el-button>-->
+<!--                    </div>-->
+<!--                </el-dialog>-->
+<!--            </div>-->
 
             <!-- 编辑标签弹层 -->
             <div class="add-form">
@@ -107,22 +121,29 @@
                     <el-form ref="dataAddForm" :model="formData" :rules="rules" label-position="right" label-width="100px">
                         <el-row>
                             <el-col >
-                                <el-form-item label="名称" prop="name">
-                                    <el-input  v-model="formData.name"/>
+                                <el-form-item label="昵称" prop="nickname">
+                                    <el-input  v-model="formData.nickname"/>
                                 </el-form-item>
                             </el-col>
                         </el-row>
                         <el-row>
                             <el-col >
-                                <el-form-item label="路径" prop="path">
-                                    <el-input  v-model="formData.path"/>
+                                <el-form-item label="权限" prop="admin">
+                                    <el-input  v-model="formData.admin"/>
                                 </el-form-item>
                             </el-col>
                         </el-row>
                         <el-row>
                             <el-col >
-                                <el-form-item label="描述" prop="description">
-                                    <el-input  v-model="formData.description"/>
+                                <el-form-item label="邮箱" prop="email">
+                                    <el-input  v-model="formData.email"/>
+                                </el-form-item>
+                            </el-col>
+                        </el-row>
+                        <el-row>
+                            <el-col >
+                                <el-form-item label="电话号码" prop="mobilePhoneNumber">
+                                    <el-input  v-model="formData.mobilePhoneNumber"/>
                                 </el-form-item>
                             </el-col>
                         </el-row>
@@ -144,6 +165,7 @@
 <script src="../js/axios-0.18.0.js"></script>
 <script src="../plugins/quill/vue-quill-editor.js"></script>
 <script>
+    //TODO 用户管理页面 功能完善  后端传来的电话号码 注册时间等信息无法显示
 
     var vue = new Vue({
         el: '#app',
@@ -207,7 +229,7 @@
             },
             //编辑
             handleEdit() {
-                axios.post("/admin/permission/update",this.formData).then((res)=>{
+                axios.post("/admin/user/update",this.formData).then((res)=>{
                     if (res.data.success){
                         this.$message({
                             message: '恭喜你，编辑成功',
@@ -224,7 +246,7 @@
             },
             //添加
             handleAdd () {
-                axios.post("/admin/permission/add",this.formData).then((res)=>{
+                axios.post("/admin/user/add",this.formData).then((res)=>{
                     if (res.data.success){
                         this.$message({
                             message: '恭喜你，添加成功',
@@ -245,7 +267,7 @@
             },
             //分页查询
             findPage() {
-                axios.post("/admin/permission/permissionList",this.pagination).then((res)=>{
+                axios.post("/admin/user/userList",this.pagination).then((res)=>{
                     if (res.data.success){
                         this.dataList = res.data.data.list;
                         this.pagination.total = res.data.data.total;
@@ -263,10 +285,10 @@
                 this.tableData = {};
             },
             // 弹出添加窗口
-            handleCreate() {
-                this.resetForm();
-                this.dialogFormVisible = true;
-            },
+            // handleCreate() {
+            //     this.resetForm();
+            //     this.dialogFormVisible = true;
+            // },
             // 弹出编辑窗口
             handleUpdate(row) {
                 this.resetForm();
@@ -284,7 +306,7 @@
                     cancelButtonText: '取消',
                     type: 'warning'
                 }).then(() => {
-                    axios.get("/admin/permission/delete/"+row.id).then((res)=>{
+                    axios.get("/admin/user/delete/"+row.id).then((res)=>{
                         if (res.data.success){
                             this.$message.success("删除成功");
                             this.findPage();
