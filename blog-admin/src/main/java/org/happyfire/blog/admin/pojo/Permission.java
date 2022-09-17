@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 /**
- * 顶顶顶
+ * 顶顶顶的
  */
 @Data
 public class Permission {
