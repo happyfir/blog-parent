@@ -68,7 +68,7 @@
                     </el-menu>
                 </el-aside>
                 <el-container>
-                    <iframe name="right" class="el-main" src="permission.html" width="100%" height="800px" frameborder="0"></iframe>
+                    <iframe name="right" class="el-main" src="admin.html" width="100%" height="800px" frameborder="0"></iframe>
                 </el-container>
             </el-container>
         </el-container>
@@ -83,9 +83,10 @@
     new Vue({
         el: '#app',
         methods:{
+            //TODO 获取用户名  密码明文传输 需要加密
             getUserInfo(){
                 axios.post("/admin/user/userInfo").then((res)=>{
-                    this.username = res.data;
+                    this.username = res.data.data.username;
                 })
             }
         },
@@ -97,7 +98,7 @@
             menuList:[
                 {
                     "path": "1",
-                    "title": "权限管理",
+                    "title": "网站管理",
                     "icon":"fa-user-md",
                     "children": [
                         {
