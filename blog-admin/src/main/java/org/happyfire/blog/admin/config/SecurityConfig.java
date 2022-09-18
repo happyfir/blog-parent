@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     public static void main(String[] args) {
         //加密策略 MD5 不安全 彩虹表  MD5 加盐
-        String pw = new BCryptPasswordEncoder().encode("123456");
+        String pw = new BCryptPasswordEncoder().encode("e10adc3949ba59abbe56e057f20f883e");
         System.out.println(pw);
     }
 

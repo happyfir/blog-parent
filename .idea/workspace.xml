@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/admin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +16,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -61,6 +63,7 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "D:/Code/IDEAProjects/blog-parent",
+    "list.type.of.created.stylesheet": "CSS",
     "settings.editor.selected.configurable": "http.proxy",
     "spring.configuration.checksum": "61077aa0fd7da1b20f9a4c0b3a6bcf73"
   },
@@ -83,6 +86,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\IDEAProjects\blog-parent\blog-admin\src\main\resources\static" />
       <recent name="D:\Code\IDEAProjects\blog-parent\blog-api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\IDEAProjects\blog-parent\blog-admin\src\main\resources\static\pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -158,7 +164,8 @@
       <workItem from="1663121555492" duration="2294000" />
       <workItem from="1663377860635" duration="16626000" />
       <workItem from="1663426277752" duration="5676000" />
-      <workItem from="1663467763327" duration="2136000" />
+      <workItem from="1663467763327" duration="4022000" />
+      <workItem from="1663481999936" duration="7090000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -209,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663432017994</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加用户管理页面">
+      <created>1663470239918</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663470239918</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
