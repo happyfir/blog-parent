@@ -18,9 +18,9 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -88,6 +88,7 @@
       <recent name="D:\Code\IDEAProjects\blog-parent\blog-api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\IDEAProjects\blog-parent\blog-admin\src\main\resources\static" />
       <recent name="D:\Code\IDEAProjects\blog-parent\blog-admin\src\main\resources\static\pages" />
     </key>
   </component>
@@ -165,7 +166,7 @@
       <workItem from="1663377860635" duration="16626000" />
       <workItem from="1663426277752" duration="5676000" />
       <workItem from="1663467763327" duration="4022000" />
-      <workItem from="1663481999936" duration="7090000" />
+      <workItem from="1663481999936" duration="10076000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -223,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663470239918</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加用户管理页面 将前端密码加密">
+      <created>1663489996409</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663489996409</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +252,7 @@
     <MESSAGE value="第一次提交" />
     <MESSAGE value="测试" />
     <MESSAGE value="添加用户管理页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加用户管理页面" />
+    <MESSAGE value="添加用户管理页面 将前端密码加密" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加用户管理页面 将前端密码加密" />
   </component>
 </project>

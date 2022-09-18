@@ -11,7 +11,7 @@
 
 <form class="form" method="post" action="/login"  autocomplete="off">
   <div class="form-inner">
-    <h2>会员登录</h2>
+    <h2>管理员登录</h2>
     <div class="input-wrapper">
       <label for="login-username">用户名</label>
       <div class="input-group"><span class="icon">
@@ -52,7 +52,6 @@
 function formSubmit() {
   var subpw = document.getElementById('login-password').value;
   document.getElementById('login-password').value = md5(subpw);
-  console.log(document.getElementById('login-password').value)
 }
 </script>
 
