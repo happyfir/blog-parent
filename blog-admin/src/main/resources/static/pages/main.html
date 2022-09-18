@@ -83,6 +83,7 @@
     new Vue({
         el: '#app',
         methods:{
+            //TODO  密码明文传输 需要加密
             getUserInfo(){
                 axios.post("/admin/user/userInfo").then((res)=>{
                     this.username = res.data.data.username;

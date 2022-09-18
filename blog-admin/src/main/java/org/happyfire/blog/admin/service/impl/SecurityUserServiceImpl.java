@@ -3,7 +3,6 @@ package org.happyfire.blog.admin.service.impl;
 import org.happyfire.blog.admin.pojo.Admin;
 import org.happyfire.blog.admin.service.AdminService;
 import org.happyfire.blog.admin.service.SecurityUserService;
-import org.happyfire.blog.admin.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 
 @Component
-public class SecurityUserServicImpl implements SecurityUserService, UserDetailsService {
+public class SecurityUserServiceImpl implements SecurityUserService, UserDetailsService {
 
     @Autowired
     private AdminService adminService;
