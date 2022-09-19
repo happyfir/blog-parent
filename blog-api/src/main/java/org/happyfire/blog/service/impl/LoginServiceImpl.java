@@ -26,8 +26,8 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     private RedisTemplate<String,String> redisTemplate;
 
-    private static final String slat = "mszlu!@#";
-//    private static final String slat = "happyfire";
+//    private static final String slat = "mszlu!@#";
+    private static final String slat = "happyfire";
 
     @Override
     public Result login(LoginParam loginParam) {
@@ -95,7 +95,7 @@ public class LoginServiceImpl implements LoginService {
         String account = registerParam.getAccount();
         String password = registerParam.getPassword();
         String nickname = registerParam.getNickname();
-        if (StringUtils.isBlank(account) || StringUtils.isBlank(password) || StringUtils.isBlank(password)){
+        if (StringUtils.isBlank(account) || StringUtils.isBlank(password) || StringUtils.isBlank(nickname)){
             return Result.fail(ErrorCode.PARAMS_ERROR.getCode(), ErrorCode.PARAMS_ERROR.getMsg());
         }
         SysUser sysUser = sysUserService.findUByAccount(account);

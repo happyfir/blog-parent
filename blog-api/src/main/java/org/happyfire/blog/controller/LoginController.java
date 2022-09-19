@@ -16,7 +16,8 @@ public class LoginController {
     private LoginService loginService;
 
     @PostMapping
-    public Result login(@RequestBody LoginParam loginParam){
+    public Result login(@RequestBody LoginParam loginParam) {
+
         //登录 验证用户 访问用户表
         return loginService.login(loginParam);
     }

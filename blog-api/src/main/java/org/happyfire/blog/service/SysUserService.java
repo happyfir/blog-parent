@@ -30,4 +30,6 @@ public interface SysUserService {
     void save(SysUser sysUser);
 
     UserVo findUserVoById(Long toUid);
+
+    void update(SysUser sysUser);
 }

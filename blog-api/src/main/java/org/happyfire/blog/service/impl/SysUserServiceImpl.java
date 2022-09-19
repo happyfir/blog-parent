@@ -78,6 +78,8 @@ public class SysUserServiceImpl implements SysUserService {
         sysUserMapper.insert(sysUser);
     }
 
+
+
     @Override
     public UserVo findUserVoById(Long id) {
         SysUser sysUser = sysUserMapper.selectById(id);
@@ -92,5 +94,12 @@ public class SysUserServiceImpl implements SysUserService {
         BeanUtils.copyProperties(sysUser,userVo);
         userVo.setId(String.valueOf(sysUser.getId()));
         return userVo;
+    }
+
+    @Override
+    public void update(SysUser sysUser) {
+        LambdaQueryWrapper<SysUser> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(SysUser::getAccount,sysUser.getAccount());
+        sysUserMapper.update(sysUser,lambdaQueryWrapper);
     }
 }
