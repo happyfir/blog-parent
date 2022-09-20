@@ -3,6 +3,7 @@ package org.happyfire.blog.service;
 import org.happyfire.blog.dao.pojo.SysUser;
 import org.happyfire.blog.vo.Result;
 import org.happyfire.blog.vo.UserVo;
+import org.happyfire.blog.vo.param.ChangeParam;
 
 public interface SysUserService {
     SysUser findUserById(Long id);
@@ -32,4 +33,8 @@ public interface SysUserService {
     UserVo findUserVoById(Long toUid);
 
     void update(SysUser sysUser);
+
+    Result changeUserInfo(String token, ChangeParam changeParam);
+
+    Result changePassword(ChangeParam changeParam);
 }

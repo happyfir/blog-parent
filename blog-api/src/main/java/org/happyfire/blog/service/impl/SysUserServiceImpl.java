@@ -1,6 +1,7 @@
 package org.happyfire.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.happyfire.blog.dao.mapper.SysUserMapper;
 import org.happyfire.blog.dao.pojo.SysUser;
@@ -10,6 +11,7 @@ import org.happyfire.blog.vo.ErrorCode;
 import org.happyfire.blog.vo.LoginUserVo;
 import org.happyfire.blog.vo.Result;
 import org.happyfire.blog.vo.UserVo;
+import org.happyfire.blog.vo.param.ChangeParam;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -25,6 +27,8 @@ public class SysUserServiceImpl implements SysUserService {
 
     @Autowired
     private LoginService loginService;
+
+    private static final String slat = "happyfire";
 
     @Override
     public SysUser findUserById(Long id) {
@@ -101,5 +105,51 @@ public class SysUserServiceImpl implements SysUserService {
         LambdaQueryWrapper<SysUser> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(SysUser::getAccount,sysUser.getAccount());
         sysUserMapper.update(sysUser,lambdaQueryWrapper);
+    }
+
+    /**
+     * 修改用户信息 （使用token）
+     * @param token
+     * @param changeParam
+     * @return
+     */
+    @Override
+    public Result changeUserInfo(String token, ChangeParam changeParam) {
+        //token合法性校验 是否为空 解析是否成功， redis是否存在
+        //如果校验失败 返回错误
+        //如果成功，返回对应的结果 LoginUserVo
+        SysUser sysUser = loginService.checkToken(token);
+        if (sysUser == null){
+            return Result.fail(ErrorCode.TOKEN_ERROR.getCode(), ErrorCode.TOKEN_ERROR.getMsg());
+        }
+        String nickName = changeParam.getNickname();
+        if (StringUtils.isBlank(nickName)){
+            return Result.fail(ErrorCode.PARAMS_ERROR.getCode(), ErrorCode.PARAMS_ERROR.getMsg());
+        }
+        sysUser.setNickname(nickName);
+        this.update(sysUser);
+        return Result.success(null);
+    }
+
+    @Override
+    public Result changePassword(ChangeParam changeParam) {
+        //根据用户名查找 旧密码
+        String account = changeParam.getAccount();
+        String nickName = changeParam.getNickname();
+        String password = changeParam.getPassword();
+        String oldPassword = changeParam.getOldPassword();
+        oldPassword = DigestUtils.md5Hex(oldPassword  + slat);
+        if (StringUtils.isBlank(account)){
+            return Result.fail(ErrorCode.PARAMS_ERROR.getCode(), ErrorCode.PARAMS_ERROR.getMsg());
+        }
+        SysUser sysUser = this.findUser(account,oldPassword);
+        if (sysUser == null){
+            return Result.fail(ErrorCode.ACCOUNT_PWD_NOT_EXIST.getCode(), ErrorCode.ACCOUNT_PWD_NOT_EXIST.getMsg());
+        }
+        password = DigestUtils.md5Hex(password  + slat);
+        sysUser.setPassword(password);
+        sysUser.setNickname(nickName);
+        this.update(sysUser);
+        return Result.success(null);
     }
 }
