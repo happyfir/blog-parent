@@ -1,5 +1,6 @@
 package org.happyfire.blog.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -16,6 +17,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class SysUserServiceImpl implements SysUserService {
@@ -59,11 +63,13 @@ public class SysUserServiceImpl implements SysUserService {
         if (sysUser == null){
             return Result.fail(ErrorCode.TOKEN_ERROR.getCode(), ErrorCode.TOKEN_ERROR.getMsg());
         }
+        //由于currentUser请求调用该方法  会从redis中取数据 所以如果修改数据后 不重新登录的话数据的修改无法返回到页面
         LoginUserVo loginUserVo = new LoginUserVo();
         loginUserVo.setId(String.valueOf(sysUser.getId()));
         loginUserVo.setNickname(sysUser.getNickname());
         loginUserVo.setAvatar(sysUser.getAvatar());
         loginUserVo.setAccount(sysUser.getAccount());
+        System.out.println(loginUserVo.toString());
         return Result.success(loginUserVo);
     }
 
@@ -118,6 +124,8 @@ public class SysUserServiceImpl implements SysUserService {
         //token合法性校验 是否为空 解析是否成功， redis是否存在
         //如果校验失败 返回错误
         //如果成功，返回对应的结果 LoginUserVo
+
+        //由于currentUser请求调用该方法  会从redis中取数据 所以如果修改数据后 不重新登录的话数据的修改无法返回到页面
         SysUser sysUser = loginService.checkToken(token);
         if (sysUser == null){
             return Result.fail(ErrorCode.TOKEN_ERROR.getCode(), ErrorCode.TOKEN_ERROR.getMsg());
@@ -128,7 +136,18 @@ public class SysUserServiceImpl implements SysUserService {
         }
         sysUser.setNickname(nickName);
         this.update(sysUser);
-        return Result.success(null);
+        //将修改后的数据存入redis
+        SysUser updateUser = this.findUserById(sysUser.getId());
+
+        redisTemplate.opsForValue().set("TOKEN_" + token, JSON.toJSONString(updateUser),1, TimeUnit.DAYS);
+
+
+        LoginUserVo loginUserVo = new LoginUserVo();
+        loginUserVo.setId(String.valueOf(updateUser.getId()));
+        loginUserVo.setNickname(updateUser.getNickname());
+        loginUserVo.setAvatar(updateUser.getAvatar());
+        loginUserVo.setAccount(updateUser.getAccount());
+        return Result.success(loginUserVo);
     }
 
     @Override
@@ -152,4 +171,6 @@ public class SysUserServiceImpl implements SysUserService {
         this.update(sysUser);
         return Result.success(null);
     }
+
+
 }

@@ -26,3 +26,6 @@ mybatis-plus:
 qiniu:
   accessKey: IUiEb93jt_k9yu0yRiGq6uYywOg42CHooPA7ArP9
   accessSecretKey: -R5D3gPRz0Vbx_J5gXgJukNeGB2Y_H8XcsRCxiEX
+
+blog:
+  path: D:\Code\IDEAProjects\blog-parent\blog-api\src\main\resources\pictures\

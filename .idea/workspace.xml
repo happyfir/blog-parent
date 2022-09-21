@@ -6,19 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/ChangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/ChangeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/ChangeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/ChangeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/SysUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ChangeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ChangeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/vo/param/ChangePasswordParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/vo/param/ChangeParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ChangeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ChangeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ChangeController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ChangeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ChangeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ChangeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ChangeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ChangeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/SysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/SysUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ChangeServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/vo/param/ChangePasswordParam.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +179,9 @@
       <workItem from="1663498343919" duration="8301000" />
       <workItem from="1663578168861" duration="3622000" />
       <workItem from="1663639613508" duration="5508000" />
-      <workItem from="1663656489472" duration="2990000" />
+      <workItem from="1663656489472" duration="6419000" />
+      <workItem from="1663685586236" duration="3964000" />
+      <workItem from="1663727119619" duration="3017000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -268,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663598160526</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="添加修改密码功能和修改用户信息功能">
+      <created>1663661000967</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663661000967</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +297,7 @@
     <MESSAGE value="添加用户管理页面" />
     <MESSAGE value="添加用户管理页面 将前端密码加密" />
     <MESSAGE value="添加修改密码功能 ChangeController" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加修改密码功能 ChangeController" />
+    <MESSAGE value="添加修改密码功能和修改用户信息功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加修改密码功能和修改用户信息功能" />
   </component>
 </project>
