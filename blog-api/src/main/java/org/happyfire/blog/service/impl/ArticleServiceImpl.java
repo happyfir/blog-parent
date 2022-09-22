@@ -138,14 +138,68 @@ public class ArticleServiceImpl implements ArticleService {
      * @param articleParam
      * @return
      */
-    //TODO 未测试
+    //TODO 新增更新文章功能
     @Override
     public Result publish(ArticleParam articleParam) {
-        //发布文章 目的是构建article对象
-        //作者id  此接口要加入到登录拦截中
-        //将标签加入到关联列表中
-        //body 内容存储
+        /**
+         *发布文章 目的是构建article对象
+         *作者id  此接口要加入到登录拦截中
+         *将标签加入到关联列表中
+         *body 内容存储
+         */
+
+
+        //文章id
+        Long articleId = articleParam.getId();
+        //用户id
         SysUser sysUser = UserThreadLocal.get();
+        //查看文章id是否存在
+        Article currentarticle = articleMapper.selectById(articleId);
+        if (currentarticle != null){
+            //当前文章存在 更新
+            currentarticle.setAuthorId(sysUser.getId());
+            currentarticle.setCategoryId(Long.parseLong(articleParam.getCategory().getId()));
+            currentarticle.setCreateDate(System.currentTimeMillis());
+            //TODO 需要对评论等属性进行改造
+            currentarticle.setCommentCounts(0);
+            currentarticle.setSummary(articleParam.getSummary());
+            currentarticle.setTitle(articleParam.getTitle());
+            //TODO 需要对阅读数量等属性进行改造
+            currentarticle.setViewCounts(0);
+            currentarticle.setWeight(Article.Article_Common);
+            //获取bodyId
+            Long bodyId = currentarticle.getBodyId();
+            currentarticle.setBodyId(bodyId);
+//            //插入之后会生成一个文章id
+//            this.articleMapper.insert(article);
+
+//            //tags
+//            List<TagVo> tags = articleParam.getTags();
+//            if (tags != null) {
+//                for (TagVo tag : tags) {
+//                    ArticleTag articleTag = new ArticleTag();
+//                    articleTag.setArticleId(currentarticle.getId());
+//                    articleTag.setTagId(Long.parseLong(tag.getId()));
+//                    this.articleTagMapper.insert(articleTag);
+//                }
+//            }
+
+            //body
+            ArticleBody articleBody = articleBodyMapper.selectById(bodyId);
+            articleBody.setContent(articleParam.getBody().getContent());
+            articleBody.setContentHtml(articleParam.getBody().getContentHtml());
+//            articleBody.setArticleId(article.getId());
+            articleBodyMapper.updateById(articleBody);
+
+            //更新文章
+            articleMapper.updateById(currentarticle);
+
+            ArticleVo articleVo = new ArticleVo();
+            articleVo.setId(currentarticle.getId().toString());
+            return Result.success(articleVo);
+        }
+
+        //当前文章不存在 新建
         Article article = new Article();
         article.setAuthorId(sysUser.getId());
         article.setCategoryId(Long.parseLong(articleParam.getCategory().getId()));
@@ -186,6 +240,7 @@ public class ArticleServiceImpl implements ArticleService {
         return Result.success(articleVo);
     }
 
+
     private List<ArticleVo> copyList(List<Article> records,boolean isTag,boolean isAuthor) {
         List<ArticleVo> articleVoList = new ArrayList<>();
         for (Article record:records){
@@ -214,6 +269,7 @@ public class ArticleServiceImpl implements ArticleService {
         }
         if (isAuthor){
             Long authorId = article.getAuthorId();
+            articleVo.setAuthorId(authorId);
             articleVo.setAuthor(sysUserService.findUserById(authorId).getNickname());
         }
         if (isBody){

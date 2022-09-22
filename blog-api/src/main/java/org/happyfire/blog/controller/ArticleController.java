@@ -21,7 +21,6 @@ public class ArticleController {
      * @param pageParams
      * @return
      */
-    //TODO 新增 标签文章分类 和 文章归档 尚未测试
     @PostMapping
     @LogAnnotation(module = "文章", operation = "获取文章列表")
     @Cache(expire = 5 * 60 * 1000,name = "list_article")
@@ -73,15 +72,14 @@ public class ArticleController {
         return articleService.findArticleById(articleId);
     }
 
+
     /**
      * 发布文章
      * @param articleParam
      * @return
      */
-    //TODO 还没有测试 需要后续进行测试
     @PostMapping("publish")
     public Result publish(@RequestBody ArticleParam articleParam){
         return articleService.publish(articleParam);
     }
-
 }

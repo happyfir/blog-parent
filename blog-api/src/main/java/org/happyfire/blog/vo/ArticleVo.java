@@ -28,6 +28,8 @@ public class ArticleVo {
 
     private String author;
 
+    private Long authorId;
+
     private ArticleBodyVo body;
 
     private List<TagVo> tags;

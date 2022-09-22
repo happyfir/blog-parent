@@ -54,9 +54,8 @@ public class UsersController {
 
     /**
      * 头像上传和下载
+     * 已弃用
      * @return
-     */
-    //TODO  将图片和当前用户联系起来
     @PostMapping("avatar")
     public Result uploadAvatar(MultipartFile file) {
         //原始文件名
@@ -79,10 +78,11 @@ public class UsersController {
         }
         return Result.success(filename);
     }
+     */
 
     /**
      * 将图片传输回前端 文件下载
-     */
+     * 已弃用
     @GetMapping("/getAvatar")
     public void download(String name, HttpServletResponse response) {
         try {
@@ -105,4 +105,5 @@ public class UsersController {
             throw new RuntimeException(e);
         }
     }
+     */
 }

@@ -69,7 +69,6 @@ public class SysUserServiceImpl implements SysUserService {
         loginUserVo.setNickname(sysUser.getNickname());
         loginUserVo.setAvatar(sysUser.getAvatar());
         loginUserVo.setAccount(sysUser.getAccount());
-        System.out.println(loginUserVo.toString());
         return Result.success(loginUserVo);
     }
 
