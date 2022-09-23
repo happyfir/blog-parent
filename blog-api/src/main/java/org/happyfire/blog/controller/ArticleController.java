@@ -25,6 +25,7 @@ public class ArticleController {
     @LogAnnotation(module = "文章", operation = "获取文章列表")
     @Cache(expire = 5 * 60 * 1000,name = "list_article")
     public Result listArticle(@RequestBody PageParams pageParams){
+
 //        System.out.println("获取的参数" + pageParams);
         return articleService.listArticle(pageParams);
     }
@@ -81,5 +82,10 @@ public class ArticleController {
     @PostMapping("publish")
     public Result publish(@RequestBody ArticleParam articleParam){
         return articleService.publish(articleParam);
+    }
+
+    @PostMapping("delete/{id}")
+    public Result deleteArticleById(@PathVariable("id") long articleId){
+        return articleService.deleteArticleById(articleId);
     }
 }

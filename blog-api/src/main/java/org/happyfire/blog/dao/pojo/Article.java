@@ -1,4 +1,5 @@
 package org.happyfire.blog.dao.pojo;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 @Data
@@ -36,9 +37,14 @@ public class Article {
      */
     private Integer weight = Article_Common;
 
-
     /**
      * 创建时间
      */
     private Long createDate;
+
+    /**
+     * 是否删除
+     * 1 代表删除  0 代表未删除
+     */
+    private Integer deleted = 0;
 }

@@ -20,11 +20,9 @@ public class CommentsController {
 
     }
 
-    //TODO 测试 目前前端没有写完 之后需要测试
     @LogAnnotation(module = "发送评论", operation = "获取发送的评论")
     @PostMapping("create/change")
     public Result comment(@RequestBody CommentParam commentParam){
-        System.out.println("发挥的 " + commentsService.comment(commentParam));
         return commentsService.comment(commentParam);
     }
 }

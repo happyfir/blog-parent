@@ -23,12 +23,10 @@ import org.happyfire.blog.vo.param.PageParams;
 import org.joda.time.DateTime;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 @Log4j2
@@ -49,6 +47,8 @@ public class ArticleServiceImpl implements ArticleService {
     private ThreadService threadService;
     @Autowired
     private ArticleTagMapper articleTagMapper;
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
 
     /**
      * 分页查询article数据表
@@ -138,7 +138,6 @@ public class ArticleServiceImpl implements ArticleService {
      * @param articleParam
      * @return
      */
-    //TODO 新增更新文章功能
     @Override
     public Result publish(ArticleParam articleParam) {
         /**
@@ -170,19 +169,6 @@ public class ArticleServiceImpl implements ArticleService {
             //获取bodyId
             Long bodyId = currentarticle.getBodyId();
             currentarticle.setBodyId(bodyId);
-//            //插入之后会生成一个文章id
-//            this.articleMapper.insert(article);
-
-//            //tags
-//            List<TagVo> tags = articleParam.getTags();
-//            if (tags != null) {
-//                for (TagVo tag : tags) {
-//                    ArticleTag articleTag = new ArticleTag();
-//                    articleTag.setArticleId(currentarticle.getId());
-//                    articleTag.setTagId(Long.parseLong(tag.getId()));
-//                    this.articleTagMapper.insert(articleTag);
-//                }
-//            }
 
             //body
             ArticleBody articleBody = articleBodyMapper.selectById(bodyId);
@@ -196,6 +182,10 @@ public class ArticleServiceImpl implements ArticleService {
 
             ArticleVo articleVo = new ArticleVo();
             articleVo.setId(currentarticle.getId().toString());
+
+            //删除redis中对用的缓存  采用模糊查询
+            clearCache();
+
             return Result.success(articleVo);
         }
 
@@ -233,13 +223,59 @@ public class ArticleServiceImpl implements ArticleService {
 
         article.setBodyId(articleBody.getId());
         articleMapper.updateById(article);
-//        Map<String,String> map = new HashMap<>();
-//        map.put("id",article.getId().toString());
         ArticleVo articleVo = new ArticleVo();
         articleVo.setId(article.getId().toString());
+
+        //删除redis中对用的缓存  采用模糊查询
+        clearCache();
+
         return Result.success(articleVo);
     }
 
+
+    private ArticleBodyVo findArticleBodyById(Long bodyId) {
+        ArticleBody articleBody = articleBodyMapper.selectById(bodyId);
+        ArticleBodyVo articleBodyVo = new ArticleBodyVo();
+        articleBodyVo.setContent(articleBody.getContent());
+        return articleBodyVo;
+    }
+
+    /**
+     * 根据文章id删除文章
+     * 软删除 并不是实际删除 而是使其无法被搜索 通过设计一个标记来实现
+     *
+     * 结果： 由于之前article的方法都是用redis缓存进行统一优化 所以当逻辑删除了文章后  由于缓存的存在，前端并不能实时反馈 需要改进
+     * 删除文章时 将redis对的键值对删除
+     * @param articleId
+     * @return
+     */
+    @Override
+    public Result deleteArticleById(long articleId) {
+        //获取文章
+        Article article = articleMapper.selectById(articleId);
+        //设置删除标志位为1
+        article.setDeleted(1);
+        articleMapper.updateById(article);
+        //删除redis中对用的缓存  采用模糊查询
+        clearCache();
+        return Result.success(null);
+    }
+
+    /**
+     * 删除redis中对用的缓存  采用模糊查询
+     */
+    public void clearCache(){
+        String[] prexs = new String[]{"hot_article::ArticleController::hotArticle::",
+                "new_article::ArticleController::newArticle::",
+                "list_archtives::ArticleController::listArchives::",
+                "list_article::ArticleController::listArticle::"};
+        for (String prex : prexs) {
+            Set<String> keys=redisTemplate.keys(prex + "*");
+            if (!keys.isEmpty()){
+                redisTemplate.delete(keys);
+            }
+        }
+    }
 
     private List<ArticleVo> copyList(List<Article> records,boolean isTag,boolean isAuthor) {
         List<ArticleVo> articleVoList = new ArrayList<>();
@@ -281,13 +317,6 @@ public class ArticleServiceImpl implements ArticleService {
             articleVo.setCategory(categoryService.findCategoryById(categoryId));
         }
         return articleVo;
-    }
-
-    private ArticleBodyVo findArticleBodyById(Long bodyId) {
-        ArticleBody articleBody = articleBodyMapper.selectById(bodyId);
-        ArticleBodyVo articleBodyVo = new ArticleBodyVo();
-        articleBodyVo.setContent(articleBody.getContent());
-        return articleBodyVo;
     }
 
 }

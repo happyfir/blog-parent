@@ -7,24 +7,19 @@
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/CommentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/CommentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/dao/pojo/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/dao/pojo/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/UploadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/UploadServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/vo/ArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/vo/ArticleVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/resources/org.happyfire.blog.dao.mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/resources/org.happyfire.blog.dao.mapper/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org.happyfire.blog.dao.mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org.happyfire.blog.dao.mapper/ArticleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/CommentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/CommentsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/dao/pojo/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/dao/pojo/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ArticleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/vo/ArticleVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/vo/ArticleVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/pictures/24ec22a9-dc54-4ff6-8613-580199ca1283.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/pictures/7760ee88-da38-4c40-8b78-96975f4731a2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/pictures/e00badc0-9225-43bf-a403-36e5d0fc018b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/pictures/e0a0fa3a-e176-4cee-b676-92d223c8ebab.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +32,8 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -193,7 +188,9 @@
       <workItem from="1663727119619" duration="3017000" />
       <workItem from="1663744567428" duration="9752000" />
       <workItem from="1663776176312" duration="1464000" />
-      <workItem from="1663812011049" duration="2636000" />
+      <workItem from="1663812011049" duration="11139000" />
+      <workItem from="1663898916251" duration="4079000" />
+      <workItem from="1663919749048" duration="8794000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -300,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663777239810</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="新增了修改文章功能">
+      <created>1663814808203</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663814808203</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +330,7 @@
     <MESSAGE value="添加修改密码功能和修改用户信息功能" />
     <MESSAGE value="完善修改密码功能和修改用户信息功能" />
     <MESSAGE value="修改了文章编辑按钮不显示的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了文章编辑按钮不显示的问题" />
+    <MESSAGE value="新增了修改文章功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增了修改文章功能" />
   </component>
 </project>

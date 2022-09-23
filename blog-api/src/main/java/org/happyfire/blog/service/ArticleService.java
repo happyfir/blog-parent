@@ -48,4 +48,5 @@ public interface ArticleService {
      */
     Result publish(ArticleParam articleParam);
 
+    Result deleteArticleById(long articleId);
 }

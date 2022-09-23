@@ -22,14 +22,14 @@
         <result column="weight" property="weight"/>
         <result column="body_id" property="bodyId"/>
         <result column="category_id" property="categoryId"/>
+        <result column="deleted" property="deleted"/>
     </resultMap>
-
-
 
     <select id="listArticle"  resultMap="articleMap">
         select * from ms_article
         <where>
             1 = 1
+            and !deleted
             <if test="categoryId != null">
                 and  category_id = #{categoryId}
             </if>
