@@ -19,6 +19,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -169,6 +170,20 @@ public class SysUserServiceImpl implements SysUserService {
         sysUser.setNickname(nickName);
         this.update(sysUser);
         return Result.success(null);
+    }
+
+    /**
+     * 根据昵称查找用户
+     * 实现前端查找和功能时需要用到此功能
+     * @param nickName
+     * @return
+     */
+    @Override
+    public List<SysUser> findUserBynickName(String nickName) {
+        LambdaQueryWrapper<SysUser> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.like(SysUser::getNickname, nickName);
+        List<SysUser> sysUserList = sysUserMapper.selectList(lambdaQueryWrapper);
+        return sysUserList;
     }
 
 

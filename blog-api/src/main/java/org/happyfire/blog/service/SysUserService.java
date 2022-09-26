@@ -5,6 +5,8 @@ import org.happyfire.blog.vo.Result;
 import org.happyfire.blog.vo.UserVo;
 import org.happyfire.blog.vo.param.ChangeParam;
 
+import java.util.List;
+
 public interface SysUserService {
     SysUser findUserById(Long id);
 
@@ -37,4 +39,6 @@ public interface SysUserService {
     Result changeUserInfo(String token, ChangeParam changeParam);
 
     Result changePassword(ChangeParam changeParam);
+
+    List<SysUser> findUserBynickName(String nickName);
 }

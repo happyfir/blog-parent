@@ -5,6 +5,8 @@ import org.happyfire.blog.vo.param.ArticleParam;
 import org.happyfire.blog.vo.param.PageParams;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Map;
+
 
 public interface ArticleService {
     /**
@@ -49,4 +51,11 @@ public interface ArticleService {
     Result publish(ArticleParam articleParam);
 
     Result deleteArticleById(long articleId);
+
+    /**
+     * 查找文章
+     * @param search
+     * @return
+     */
+    Result searchArticles(String search);
 }

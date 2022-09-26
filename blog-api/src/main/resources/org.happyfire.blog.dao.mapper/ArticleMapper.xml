@@ -8,7 +8,7 @@
     <!--        id,avatar,tag_name as tagName-->
     <!--    </sql>-->
     <select id="listArchives" resultType="org.happyfire.blog.dao.dos.Archives">
-        select year(FROM_UNIXTIME(create_date/1000)) year,month(FROM_UNIXTIME(create_date/1000)) month, count(*) count from ms_article group by year,month
+        select year(FROM_UNIXTIME(create_date/1000)) year,month(FROM_UNIXTIME(create_date/1000)) month, count(*) count from ms_article where deleted = 0 group by year,month order by create_date desc
     </select>
 
     <resultMap id="articleMap" type="org.happyfire.blog.dao.pojo.Article">
@@ -30,6 +30,9 @@
         <where>
             1 = 1
             and !deleted
+            <if test="authorId != null">
+                and author_id = #{authorId}
+            </if>
             <if test="categoryId != null">
                 and  category_id = #{categoryId}
             </if>

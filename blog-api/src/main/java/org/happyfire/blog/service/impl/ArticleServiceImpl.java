@@ -8,10 +8,7 @@ import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
 import org.happyfire.blog.dao.dos.Archives;
 import org.happyfire.blog.dao.mapper.*;
-import org.happyfire.blog.dao.pojo.Article;
-import org.happyfire.blog.dao.pojo.ArticleBody;
-import org.happyfire.blog.dao.pojo.ArticleTag;
-import org.happyfire.blog.dao.pojo.SysUser;
+import org.happyfire.blog.dao.pojo.*;
 import org.happyfire.blog.service.*;
 import org.happyfire.blog.utils.UserThreadLocal;
 import org.happyfire.blog.vo.ArticleBodyVo;
@@ -58,7 +55,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Result listArticle(PageParams pageParams) {
         Page<Article> page = new Page<>(pageParams.getPage(),pageParams.getPageSize());
-        IPage<Article> articleIPage = this.articleMapper.listArticle(page,pageParams.getCategoryId(),pageParams.getTagId(),pageParams.getYear(),pageParams.getMonth());
+        IPage<Article> articleIPage = this.articleMapper.listArticle(page,pageParams.getCategoryId(),pageParams.getTagId(),pageParams.getYear(),pageParams.getMonth(),pageParams.getAuthorId());
         return Result.success(copyList(articleIPage.getRecords(),true,true));
     }
 //    @Override
@@ -262,13 +259,53 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     /**
+     * 根据条件查询文章
+     * TODO 目前的逻辑很简单 需要后期进行完善
+     * TODO 如果条件允许 可以实现es查询
+     * @param condition
+     * @return
+     */
+    @Override
+    public Result searchArticles(String condition) {
+        LambdaQueryWrapper<Article> searchQueryWrapper = new LambdaQueryWrapper<>();
+        searchQueryWrapper.like(Article::getTitle,condition)
+                .or().like(Article::getSummary,condition);
+        //如果查询的条件是作者 标签 分类 需要进行转化
+        //查询条件是作者
+        List<SysUser> userList = sysUserService.findUserBynickName(condition);
+        for (SysUser sysUser : userList) {
+            searchQueryWrapper.or().eq(Article::getAuthorId,sysUser.getId());
+        }
+        //查询条件是标签
+        List<Category> categoryList = categoryService.findCategoryByName(condition);
+        for (Category category : categoryList) {
+            searchQueryWrapper.or().eq(Article::getCategoryId,category.getId());
+        }
+        //查询条件是标签 多对多关系
+        List<ArticleTag> articleTagList = new ArrayList<>();
+        List<Tag> tagList = tagService.findTagsByArticleName(condition);
+        for (Tag tag : tagList) {
+            LambdaQueryWrapper<ArticleTag> articleTagsLambdaQueryWrapper = new LambdaQueryWrapper<>();
+            articleTagsLambdaQueryWrapper.eq(ArticleTag::getTagId,tag.getId());
+            articleTagList = articleTagMapper.selectList(articleTagsLambdaQueryWrapper);
+        }
+        for (ArticleTag articleTag : articleTagList) {
+            searchQueryWrapper.or().like(Article::getId,articleTag.getArticleId());
+        }
+
+        List<Article> articles = articleMapper.selectList(searchQueryWrapper);
+        return Result.success(copyList(articles,false,false));
+    }
+
+    /**
      * 删除redis中对用的缓存  采用模糊查询
      */
     public void clearCache(){
         String[] prexs = new String[]{"hot_article::ArticleController::hotArticle::",
                 "new_article::ArticleController::newArticle::",
                 "list_archtives::ArticleController::listArchives::",
-                "list_article::ArticleController::listArticle::"};
+                "list_article::ArticleController::listArticle::",
+                "search_articles::ArticleController::searchArticles::"};
         for (String prex : prexs) {
             Set<String> keys=redisTemplate.keys(prex + "*");
             if (!keys.isEmpty()){

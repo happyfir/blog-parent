@@ -1,5 +1,6 @@
 package org.happyfire.blog.service;
 
+import org.happyfire.blog.dao.pojo.Tag;
 import org.happyfire.blog.vo.Result;
 import org.happyfire.blog.vo.TagVo;
 
@@ -19,4 +20,6 @@ public interface TagService {
     Result findAllDetail();
 
     Result findDetailById(Long id);
+
+    List<Tag> findTagsByArticleName(String name);
 }

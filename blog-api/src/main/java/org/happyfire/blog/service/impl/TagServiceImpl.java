@@ -76,4 +76,18 @@ public class TagServiceImpl implements TagService {
         TagVo copy = copy(tag);
         return Result.success(copy);
     }
+
+    /**
+     * 根据标签名称查询标签
+     * 前端搜索功能会用到
+     * @param name
+     * @return
+     */
+    @Override
+    public List<Tag> findTagsByArticleName(String name) {
+        LambdaQueryWrapper<Tag> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(Tag::getTagName,name);
+        List<Tag> tagList = tagMapper.selectList(queryWrapper);
+        return tagList;
+    }
 }

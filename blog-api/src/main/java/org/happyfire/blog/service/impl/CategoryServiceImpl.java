@@ -48,6 +48,20 @@ public class CategoryServiceImpl implements CategoryService {
         return Result.success(categoryVo);
     }
 
+    /**
+     * 根据分类名称查询分类
+     * 前端搜索功能会用到
+     * @param name
+     * @return
+     */
+    @Override
+    public List<Category> findCategoryByName(String name) {
+        LambdaQueryWrapper<Category> categoryLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        categoryLambdaQueryWrapper.like(Category::getCategoryName,name);
+        List<Category> categories = categoryMapper.selectList(categoryLambdaQueryWrapper);
+        return categories;
+    }
+
     public CategoryVo copy(Category category){
         CategoryVo categoryVo = new CategoryVo();
         BeanUtils.copyProperties(category,categoryVo);

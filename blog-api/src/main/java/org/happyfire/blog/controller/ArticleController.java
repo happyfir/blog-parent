@@ -6,8 +6,11 @@ import org.happyfire.blog.service.ArticleService;
 import org.happyfire.blog.vo.Result;
 import org.happyfire.blog.vo.param.ArticleParam;
 import org.happyfire.blog.vo.param.PageParams;
+import org.happyfire.blog.vo.param.SearchParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 //json数据类型交互
 @RestController
@@ -25,8 +28,6 @@ public class ArticleController {
     @LogAnnotation(module = "文章", operation = "获取文章列表")
     @Cache(expire = 5 * 60 * 1000,name = "list_article")
     public Result listArticle(@RequestBody PageParams pageParams){
-
-//        System.out.println("获取的参数" + pageParams);
         return articleService.listArticle(pageParams);
     }
 
@@ -84,8 +85,25 @@ public class ArticleController {
         return articleService.publish(articleParam);
     }
 
+    /**
+     * 删除文章
+     * @param articleId
+     * @return
+     */
     @PostMapping("delete/{id}")
     public Result deleteArticleById(@PathVariable("id") long articleId){
         return articleService.deleteArticleById(articleId);
     }
+
+    /**
+     * 查询功能
+     * @param searchParam
+     * @return
+     */
+    @PostMapping("search")
+    @Cache(expire = 5 * 60 * 1000,name = "search_articles")
+    public Result searchArticles(@RequestBody SearchParam searchParam){
+        return articleService.searchArticles(searchParam.getCondition());
+    }
+
 }
