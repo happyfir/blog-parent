@@ -3,6 +3,7 @@ package org.happyfire.blog.vo;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
+import org.happyfire.blog.dao.pojo.SysUser;
 
 import java.util.List;
 
@@ -35,6 +36,8 @@ public class ArticleVo {
     private List<TagVo> tags;
 
     private CategoryVo category;
+
+    private String avatar;
 
 }
 

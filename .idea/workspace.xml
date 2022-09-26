@@ -193,7 +193,7 @@
       <workItem from="1663987831307" duration="5095000" />
       <workItem from="1664025374941" duration="5016000" />
       <workItem from="1664070227965" duration="2893000" />
-      <workItem from="1664158328076" duration="15517000" />
+      <workItem from="1664158328076" duration="17252000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -314,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663948345834</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="新增了搜索功能">
+      <created>1664203469802</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664203469802</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +349,7 @@
     <MESSAGE value="修改了文章编辑按钮不显示的问题" />
     <MESSAGE value="新增了修改文章功能" />
     <MESSAGE value="新增了删除文章功能 采用逻辑删除方法 同时解决了数据库与缓存不一致导致前端无法正确展示数据的问题（发布，删除文章时清空对应的redis键值对）" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增了删除文章功能 采用逻辑删除方法 同时解决了数据库与缓存不一致导致前端无法正确展示数据的问题（发布，删除文章时清空对应的redis键值对）" />
+    <MESSAGE value="新增了搜索功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增了搜索功能" />
   </component>
 </project>

@@ -344,6 +344,7 @@ public class ArticleServiceImpl implements ArticleService {
             Long authorId = article.getAuthorId();
             articleVo.setAuthorId(authorId);
             articleVo.setAuthor(sysUserService.findUserById(authorId).getNickname());
+            articleVo.setAvatar(sysUserService.findUserById(authorId).getAvatar());
         }
         if (isBody){
             Long bodyId = article.getBodyId();
