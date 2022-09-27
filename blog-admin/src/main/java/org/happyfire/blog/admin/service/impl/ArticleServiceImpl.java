@@ -7,6 +7,9 @@ import org.happyfire.blog.admin.mapper.*;
 import org.happyfire.blog.admin.model.params.PageParam;
 import org.happyfire.blog.admin.pojo.*;
 import org.happyfire.blog.admin.service.ArticleService;
+import org.happyfire.blog.admin.service.CategoryService;
+import org.happyfire.blog.admin.service.Sys_userService;
+import org.happyfire.blog.admin.service.TagService;
 import org.happyfire.blog.admin.vo.ArticleVo;
 import org.happyfire.blog.admin.vo.PageResult;
 import org.happyfire.blog.admin.vo.Result;
@@ -21,6 +24,12 @@ import java.util.List;
 @Service
 public class ArticleServiceImpl implements ArticleService {
 
+    @Autowired
+    private Sys_userService sysUserService;
+    @Autowired
+    private CategoryService categoryService;
+    @Autowired
+    private TagService tagService;
     @Autowired
     private ArticlesMapper articlesMapper;
     @Autowired
@@ -43,14 +52,40 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Result getArticles(PageParam pageParam) {
+        String condition = pageParam.getQueryString();
         Page<Article> page = new Page<>(pageParam.getCurrentPage(), pageParam.getPageSize());
-        LambdaQueryWrapper<Article> lambdaQueryWrapper = new LambdaQueryWrapper<>();
-        if (StringUtils.isNoneBlank(pageParam.getQueryString())){
+        LambdaQueryWrapper<Article> searchQueryWrapper = new LambdaQueryWrapper<>();
+        if (StringUtils.isNoneBlank(condition)){
             //TODO 查询逻辑
-            lambdaQueryWrapper.like(Article::getTitle,pageParam.getQueryString())
-                    .or().like(Article::getSummary,pageParam.getQueryString());
+            searchQueryWrapper.like(Article::getTitle,condition)
+                    .or().like(Article::getSummary,condition);
+
+            //如果查询的条件是作者 标签 分类 需要进行转化
+            //查询条件是作者
+            List<Sys_user> userList = sysUserService.findUserBynickName(condition);
+            for (Sys_user sysUser : userList) {
+                searchQueryWrapper.or().eq(Article::getAuthorId,sysUser.getId());
+            }
+
+            //查询条件是分类
+            List<Category> categoryList = categoryService.findCategoryByName(condition);
+            for (Category category : categoryList) {
+                searchQueryWrapper.or().eq(Article::getCategoryId,category.getId());
+            }
+
+            //查询条件是标签 多对多关系
+            List<ArticleTag> articleTagList = new ArrayList<>();
+            List<Tag> tagList = tagService.findTagsByArticleName(condition);
+            for (Tag tag : tagList) {
+                LambdaQueryWrapper<ArticleTag> articleTagsLambdaQueryWrapper = new LambdaQueryWrapper<>();
+                articleTagsLambdaQueryWrapper.eq(ArticleTag::getTagId,tag.getId());
+                articleTagList = articleTagMapper.selectList(articleTagsLambdaQueryWrapper);
+            }
+            for (ArticleTag articleTag : articleTagList) {
+                searchQueryWrapper.or().like(Article::getId,articleTag.getArticleId());
+            }
         }
-        Page<Article> articlePage = articlesMapper.selectPage(page, lambdaQueryWrapper);
+        Page<Article> articlePage = articlesMapper.selectPage(page, searchQueryWrapper);
 
         List<Article> articleRecords = articlePage.getRecords();
         List<ArticleVo> articleVoList = copyList(articleRecords);

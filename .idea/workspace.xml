@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/mapper/ArticlesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/pojo/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/articles.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/adminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +186,10 @@
       <workItem from="1664025374941" duration="5016000" />
       <workItem from="1664070227965" duration="2893000" />
       <workItem from="1664158328076" duration="17252000" />
-      <workItem from="1664247330052" duration="14388000" />
+      <workItem from="1664247330052" duration="15110000" />
+      <workItem from="1664288860406" duration="102000" />
+      <workItem from="1664288972360" duration="742000" />
+      <workItem from="1664289880297" duration="4571000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -323,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664203469802</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="后台系统添加了文章管理功能 展示文章信息和删除文章（硬删除）">
+      <created>1664285304242</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1664285304242</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +353,7 @@
     <MESSAGE value="新增了修改文章功能" />
     <MESSAGE value="新增了删除文章功能 采用逻辑删除方法 同时解决了数据库与缓存不一致导致前端无法正确展示数据的问题（发布，删除文章时清空对应的redis键值对）" />
     <MESSAGE value="新增了搜索功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增了搜索功能" />
+    <MESSAGE value="后台系统添加了文章管理功能 展示文章信息和删除文章（硬删除）" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台系统添加了文章管理功能 展示文章信息和删除文章（硬删除）" />
   </component>
 </project>

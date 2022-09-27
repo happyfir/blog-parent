@@ -78,4 +78,9 @@ public class adminController {
     public Result deleteArticle(@PathVariable("id") Long id) {
         return articleService.delete(id);
     }
+
+    @GetMapping("user/password/{id}")
+    public Result clearPassword(@PathVariable("id") Long id){
+        return sysUserService.clearPassword(id);
+    }
 }

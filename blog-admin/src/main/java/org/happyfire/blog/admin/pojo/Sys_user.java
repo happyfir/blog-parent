@@ -20,7 +20,7 @@ public class Sys_user {
 //    @TableField("mobile_phone_number")
     String mobilePhoneNumber;
     String nickname;
-//    String password;
+    String password;
 //    String salt;
 //    String status;
 }

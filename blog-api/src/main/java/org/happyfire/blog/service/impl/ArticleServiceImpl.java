@@ -276,7 +276,7 @@ public class ArticleServiceImpl implements ArticleService {
         for (SysUser sysUser : userList) {
             searchQueryWrapper.or().eq(Article::getAuthorId,sysUser.getId());
         }
-        //查询条件是标签
+        //查询条件是分类
         List<Category> categoryList = categoryService.findCategoryByName(condition);
         for (Category category : categoryList) {
             searchQueryWrapper.or().eq(Article::getCategoryId,category.getId());
