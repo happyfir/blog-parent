@@ -3,6 +3,7 @@ package org.happyfire.blog.admin.controller;
 import org.happyfire.blog.admin.model.params.PageParam;
 import org.happyfire.blog.admin.pojo.Permission;
 import org.happyfire.blog.admin.pojo.Sys_user;
+import org.happyfire.blog.admin.service.ArticleService;
 import org.happyfire.blog.admin.service.PermissionService;
 import org.happyfire.blog.admin.service.SecurityUserService;
 import org.happyfire.blog.admin.service.Sys_userService;
@@ -23,6 +24,9 @@ public class adminController {
 
     @Autowired
     private Sys_userService sysUserService;
+
+    @Autowired
+    private ArticleService articleService;
 
 
     @PostMapping("permission/permissionList")
@@ -63,5 +67,15 @@ public class adminController {
     @PostMapping("user/userInfo")
     public Result getUserInfo(){
         return sysUserService.getUserInfo();
+    }
+
+    @PostMapping("articles/articlesList")
+    public Result getArticles(@RequestBody PageParam pageParam) {
+        return articleService.getArticles(pageParam);
+    }
+
+    @GetMapping("articles/delete/{id}")
+    public Result deleteArticle(@PathVariable("id") Long id) {
+        return articleService.delete(id);
     }
 }

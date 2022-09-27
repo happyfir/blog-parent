@@ -37,6 +37,9 @@ public class ArticleVo {
 
     private CategoryVo category;
 
+    /**
+     * 文章作者的头像
+     */
     private String avatar;
 
 }
