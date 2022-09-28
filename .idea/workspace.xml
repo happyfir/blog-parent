@@ -214,7 +214,7 @@
       <workItem from="1664288972360" duration="742000" />
       <workItem from="1664289880297" duration="4675000" />
       <workItem from="1664325652184" duration="7231000" />
-      <workItem from="1664339197432" duration="17238000" />
+      <workItem from="1664339197432" duration="17565000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -363,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664334911554</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="对后台用户进行管理">
+      <created>1664382252721</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664382252721</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +402,7 @@
     <MESSAGE value="后台系统添加了文章管理功能 展示文章信息和删除文章（硬删除）" />
     <MESSAGE value="后台系统完善了文章管理功能中的搜索功能，添加对用户密码的重置功能" />
     <MESSAGE value="对后台系统代码进行规范化" />
-    <option name="LAST_COMMIT_MESSAGE" value="对后台系统代码进行规范化" />
+    <MESSAGE value="对后台用户进行管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="对后台用户进行管理" />
   </component>
 </project>
