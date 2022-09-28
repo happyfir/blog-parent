@@ -1,5 +1,6 @@
 package org.happyfire.blog.admin.config;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.happyfire.blog.admin.service.impl.SecurityUserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -23,8 +24,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     public static void main(String[] args) {
         //加密策略 MD5 不安全 彩虹表  MD5 加盐
-        String pw = new BCryptPasswordEncoder().encode("e10adc3949ba59abbe56e057f20f883e");
-        System.out.println(pw);
+        String password = "111111";
+        password = DigestUtils.md5Hex(password);
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encode = passwordEncoder.encode(password);
+        System.out.println(encode);
+//        boolean matches = passwordEncoder.matches(password, "$2a$10$N0.qJr1or2n7tMXdH2FGDOOFZ38ufXcedLp9Z35UFG0WYPi0906fy");
+//        System.out.println(matches);
     }
 
 

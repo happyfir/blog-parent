@@ -34,6 +34,7 @@ public class SecurityUserServiceImpl implements SecurityUserService, UserDetails
             //登陆失败
             return null;
         }
+
         UserDetails userDetails = new User(username, admin.getPassword(), new ArrayList<>());
         return userDetails;
     }

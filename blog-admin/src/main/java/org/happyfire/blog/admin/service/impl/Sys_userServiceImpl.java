@@ -41,8 +41,8 @@ public class Sys_userServiceImpl implements Sys_userService {
         Page<Sys_user> page = new Page<>(pageParam.getCurrentPage(),pageParam.getPageSize());
         LambdaQueryWrapper<Sys_user> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         if (StringUtils.isNoneBlank(pageParam.getQueryString())){
-            lambdaQueryWrapper.eq(Sys_user::getNickname,pageParam.getQueryString())
-                    .or().eq(Sys_user::getAccount,pageParam.getQueryString())
+            lambdaQueryWrapper.like(Sys_user::getNickname,pageParam.getQueryString())
+                    .or().like(Sys_user::getAccount,pageParam.getQueryString())
                     .or().like(Sys_user::getEmail,pageParam.getQueryString())
                     .or().like(Sys_user::getMobilePhoneNumber,pageParam.getQueryString());
         }

@@ -56,7 +56,6 @@ public class ArticleServiceImpl implements ArticleService {
         Page<Article> page = new Page<>(pageParam.getCurrentPage(), pageParam.getPageSize());
         LambdaQueryWrapper<Article> searchQueryWrapper = new LambdaQueryWrapper<>();
         if (StringUtils.isNoneBlank(condition)){
-            //TODO 查询逻辑
             searchQueryWrapper.like(Article::getTitle,condition)
                     .or().like(Article::getSummary,condition);
 

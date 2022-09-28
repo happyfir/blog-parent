@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../leetcode/editor/cn/[面试题 17.09]第 k 个数.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../leetcode/editor/cn/doc/content/[面试题 17.09]第 k 个数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 17.09" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/../leetcode/editor/cn/[面试题 17.09]第 k 个数.java" />
+              <option name="titleSlug" value="get-kth-magic-number-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

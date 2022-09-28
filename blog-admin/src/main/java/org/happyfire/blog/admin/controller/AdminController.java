@@ -1,86 +1,58 @@
 package org.happyfire.blog.admin.controller;
 
 import org.happyfire.blog.admin.model.params.PageParam;
+import org.happyfire.blog.admin.pojo.Admin;
 import org.happyfire.blog.admin.pojo.Permission;
 import org.happyfire.blog.admin.pojo.Sys_user;
+import org.happyfire.blog.admin.service.AdminService;
 import org.happyfire.blog.admin.service.ArticleService;
 import org.happyfire.blog.admin.service.PermissionService;
-import org.happyfire.blog.admin.service.SecurityUserService;
 import org.happyfire.blog.admin.service.Sys_userService;
+import org.happyfire.blog.admin.vo.AdminVo;
 import org.happyfire.blog.admin.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * 用户：admin
  * 密码：123456
  */
+
 @RestController
 @RequestMapping("admin")
-public class adminController {
+@Transactional
+public class AdminController {
 
     @Autowired
-    private PermissionService permissionService;
+    private AdminService adminService;
 
-    @Autowired
-    private Sys_userService sysUserService;
-
-    @Autowired
-    private ArticleService articleService;
-
-
-    @PostMapping("permission/permissionList")
-    public Result listPermission(@RequestBody PageParam pageParam) {
-        return permissionService.listPermission(pageParam);
+    @PostMapping("update")
+    public Result updateAdmin(@RequestBody AdminVo adminVo){
+        return adminService.update(adminVo);
+    }
+    @PostMapping("add")
+    public Result addAdmin(@RequestBody AdminVo adminVo){
+        return adminService.addAdmin(adminVo);
     }
 
-    @PostMapping("permission/add")
-    public Result add(@RequestBody Permission permission) {
-        return permissionService.add(permission);
+    @PostMapping("adminList")
+    public Result adminList(@RequestBody PageParam pageParam){
+        return adminService.getAdmins(pageParam);
     }
 
-    @PostMapping("permission/update")
-    public Result update(@RequestBody Permission permission) {
-        return permissionService.update(permission);
+    @GetMapping("delete/{id}")
+    public Result deleteAdmin(@PathVariable("id") Long id) {
+        return adminService.deleteById(id);
     }
 
-    @GetMapping("permission/delete/{id}")
-    public Result delete(@PathVariable("id") Long id) {
-        return permissionService.delete(id);
-    }
-
-    @PostMapping("user/userList")
-    public Result listUser(@RequestBody PageParam pageParam) {
-        return sysUserService.listUser(pageParam);
-    }
-
-    @PostMapping("user/update")
-    public Result updateUser(@RequestBody Sys_user sysUser){
-        return sysUserService.update(sysUser);
-    }
-
-    @GetMapping("user/delete/{id}")
-    public Result userDelete(@PathVariable("id") Long id) {
-        return sysUserService.delete(id);
-    }
-
-    @PostMapping("user/userInfo")
-    public Result getUserInfo(){
-        return sysUserService.getUserInfo();
-    }
-
-    @PostMapping("articles/articlesList")
-    public Result getArticles(@RequestBody PageParam pageParam) {
-        return articleService.getArticles(pageParam);
-    }
-
-    @GetMapping("articles/delete/{id}")
-    public Result deleteArticle(@PathVariable("id") Long id) {
-        return articleService.delete(id);
-    }
-
-    @GetMapping("user/password/{id}")
-    public Result clearPassword(@PathVariable("id") Long id){
-        return sysUserService.clearPassword(id);
+    /**
+     * 重置密码  重置后密码为username账户
+     * @param id
+     * @return
+     */
+    @GetMapping("password/{id}")
+    public Result clearPassword(@PathVariable("id") Long id) {
+        return adminService.clearPassword(id);
     }
 }

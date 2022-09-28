@@ -207,7 +207,7 @@
                 },
                 //编辑
                 handleEdit() {
-                    axios.post("/admin/permission/update",this.formData).then((res)=>{
+                    axios.post("/permission/update",this.formData).then((res)=>{
                         if (res.data.success){
                             this.$message({
                                 message: '恭喜你，编辑成功',
@@ -224,7 +224,7 @@
                 },
                 //添加
                 handleAdd () {
-                    axios.post("/admin/permission/add",this.formData).then((res)=>{
+                    axios.post("/permission/add",this.formData).then((res)=>{
                         if (res.data.success){
                             this.$message({
                                 message: '恭喜你，添加成功',
@@ -245,7 +245,7 @@
                 },
                 //分页查询
                 findPage() {
-                    axios.post("/admin/permission/permissionList",this.pagination).then((res)=>{
+                    axios.post("/permission/permissionList",this.pagination).then((res)=>{
                         if (res.data.success){
                             this.dataList = res.data.data.list;
                             this.pagination.total = res.data.data.total;
@@ -284,7 +284,7 @@
                         cancelButtonText: '取消',
                         type: 'warning'
                     }).then(() => {
-                        axios.get("/admin/permission/delete/"+row.id).then((res)=>{
+                        axios.get("/permission/delete/"+row.id).then((res)=>{
                             if (res.data.success){
                                 this.$message.success("删除成功");
                                 this.findPage();

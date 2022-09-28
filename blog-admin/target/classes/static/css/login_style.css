@@ -8,13 +8,14 @@
   --space-xl: calc(var(--space-root) * 2);
   --color-primary: mediumslateblue;
   --color-secondary: black;
-  --color-tertiary: #28d1ff;
+  --color-tertiary: #DDDDDD;
   --base-border-radius: 0.25rem;
   --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
   --duration: 350ms;
   --font-family: 'Roboto', sans-serif;
   --font-size: 1.25rem;
 }
+/**  #28d1ff */
 
 * {
   box-sizing: border-box;
