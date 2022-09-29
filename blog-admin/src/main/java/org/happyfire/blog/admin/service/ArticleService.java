@@ -8,4 +8,11 @@ public interface ArticleService {
     Result getArticles(PageParam pageParam);
 
     Result delete(Long id);
+
+    /**
+     * 查找某一分类下存在的文章数目
+     * @param id
+     * @return
+     */
+    int findArticlesByCategoryId(Long id);
 }

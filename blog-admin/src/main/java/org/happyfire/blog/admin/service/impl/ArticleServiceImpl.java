@@ -123,6 +123,19 @@ public class ArticleServiceImpl implements ArticleService {
         return Result.success(null);
     }
 
+    /**
+     * 查找某一分类下存在的文章数目
+     * @param id
+     * @return
+     */
+    @Override
+    public int findArticlesByCategoryId(Long id) {
+        LambdaQueryWrapper<Article> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(Article::getCategoryId,id);
+        List<Article> articles = articlesMapper.selectList(lambdaQueryWrapper);
+        return articles.size();
+    }
+
     private List<ArticleVo> copyList(List<Article> records){
         List<ArticleVo> articleVoList = new ArrayList<>();
         for (Article record : records) {

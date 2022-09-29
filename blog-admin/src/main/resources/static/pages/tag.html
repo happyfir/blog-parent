@@ -27,17 +27,17 @@
 <body class="hold-transition">
 <div id="app">
   <div class="content-header">
-    <h1>网站管理<small>分类管理</small></h1>
+    <h1>网站管理<small>标签管理</small></h1>
     <el-breadcrumb separator-class="el-icon-arrow-right" class="breadcrumb">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>网站管理</el-breadcrumb-item>
-      <el-breadcrumb-item>分类管理</el-breadcrumb-item>
+      <el-breadcrumb-item>标签管理</el-breadcrumb-item>
     </el-breadcrumb>
   </div>
   <div class="app-container">
     <div class="box">
       <div class="filter-container">
-        <el-input placeholder="分类信息" v-model="pagination.queryString" style="width: 200px;" class="filter-item"></el-input>
+        <el-input placeholder="标签信息" v-model="pagination.queryString" style="width: 200px;" class="filter-item"></el-input>
         <el-button @click="findSearchPage()" class="dalfBut">查询</el-button>
         <el-button type="primary" class="butT" @click="handleCreate()">新增</el-button>
       </div>
@@ -53,9 +53,7 @@
           </template>
         </el-table-column>
         </el-table-column>
-        <el-table-column label="名称" align="center" prop="categoryName">
-        </el-table-column>
-        <el-table-column label="描述" align="center" prop="description">
+        <el-table-column label="名称" align="center" prop="tagName">
         </el-table-column>
         <el-table-column label="操作" align="center">
           <template slot-scope="scope">
@@ -81,18 +79,18 @@
           <el-form ref="dataAddForm" :model="formData" :rules="rules" label-position="right" label-width="100px">
             <el-row>
               <el-col >
-                <el-form-item label="名称" prop="categoryName">
-                  <el-input  v-model="formData.categoryName"/>
+                <el-form-item label="名称" prop="tagName">
+                  <el-input  v-model="formData.tagName"/>
                 </el-form-item>
               </el-col>
             </el-row>
             <el-row>
               <el-col >
                 <el-form-item label="图标" prop="avatar">
-<!--                  <el-input  v-model="formData.avatar"/>-->
+                  <!--                  <el-input  v-model="formData.avatar"/>-->
                   <el-upload
                           class="avatar-uploader"
-                          action="/category/uploadAvatar"
+                          action="/tag/uploadAvatar"
                           :show-file-list="false"
                           :data="ImageData"
                           :on-success="handleAvatarSuccess"
@@ -117,15 +115,8 @@
           <el-form ref="dataAddForm" :model="formData" :rules="rules" label-position="right" label-width="100px">
             <el-row>
               <el-col >
-                <el-form-item label="名称" prop="categoryName">
-                  <el-input  v-model="formData.categoryName"/>
-                </el-form-item>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col >
-                <el-form-item label="描述" prop="description">
-                  <el-input  v-model="formData.description"/>
+                <el-form-item label="名称" prop="tagName">
+                  <el-input  v-model="formData.tagName"/>
                 </el-form-item>
               </el-col>
             </el-row>
@@ -143,15 +134,8 @@
           <el-form ref="editAddForm" :model="formData" :rules="rules" label-position="right" label-width="100px">
             <el-row>
               <el-col >
-                <el-form-item label="名称" prop="categoryName">
-                  <el-input  v-model="formData.categoryName"/>
-                </el-form-item>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col >
-                <el-form-item label="描述" prop="description">
-                  <el-input  v-model="formData.description"/>
+                <el-form-item label="名称" prop="tagName">
+                  <el-input  v-model="formData.tagName"/>
                 </el-form-item>
               </el-col>
             </el-row>
@@ -177,7 +161,7 @@
     el: '#app',
     data:{
       ImageData: {
-        categoryId: ''
+        tagId: ''
       },
       imageUrl: '',
       activeName:'first',
@@ -249,7 +233,7 @@
       },
       //编辑
       handleEdit() {
-        axios.post("/category/update",this.formData).then((res)=>{
+        axios.post("/tag/update",this.formData).then((res)=>{
           if (res.data.success){
             this.$message({
               message: '恭喜你，编辑成功',
@@ -266,7 +250,7 @@
       },
       //添加
       handleAdd () {
-        axios.post("/category/add",this.formData).then((res)=>{
+        axios.post("/tag/add",this.formData).then((res)=>{
           if (res.data.success){
             this.$message({
               message: '恭喜你，添加成功',
@@ -287,7 +271,7 @@
       },
       //分页查询
       findPage() {
-        axios.post("/category/categoryList",this.pagination).then((res)=>{
+        axios.post("/tag/tagList",this.pagination).then((res)=>{
           if (res.data.success){
             this.dataList = res.data.data.list;
             this.pagination.total = res.data.data.total;
@@ -306,8 +290,8 @@
       },
       // 弹出添加窗口
       handleCreate() {
-          this.resetForm();
-          this.dialogFormVisible = true;
+        this.resetForm();
+        this.dialogFormVisible = true;
       },
       // 弹出编辑窗口
       handleUpdate(row) {
@@ -320,7 +304,7 @@
         this.resetForm();
         this.dialogFormVisibleAvatar = true;
         this.formData = row;
-        this.ImageData.categoryId = this.formData.id;
+        this.ImageData.tagId = this.formData.id;
       },
       //切换页码
       handleCurrentChange(currentPage) {
@@ -333,7 +317,7 @@
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-          axios.get("/category/delete/"+row.id).then((res)=>{
+          axios.get("/tag/delete/"+row.id).then((res)=>{
             if (res.data.success){
               this.$message.success("删除成功");
               this.findPage();

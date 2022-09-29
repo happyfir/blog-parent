@@ -603,3 +603,14 @@ label input[type="radio"]:checked {
 	height: 178px;
 	display: block;
 }
+
+.changIcon {
+	cursor: pointer;
+	color: rgba(25,137,250,.85);
+	flex: 1;
+}
+
+.icon {
+	display: flex;
+	flex-direction: row;
+}
