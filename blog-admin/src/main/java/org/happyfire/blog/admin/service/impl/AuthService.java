@@ -11,12 +11,14 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Service
 @Slf4j
+@Transactional
 public class AuthService {
     @Autowired
     private AdminService adminService;

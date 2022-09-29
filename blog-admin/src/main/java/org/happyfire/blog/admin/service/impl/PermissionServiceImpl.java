@@ -11,8 +11,10 @@ import org.happyfire.blog.admin.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class PermissionServiceImpl implements PermissionService {
 
     @Autowired
