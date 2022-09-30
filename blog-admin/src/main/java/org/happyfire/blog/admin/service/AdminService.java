@@ -1,6 +1,7 @@
 package org.happyfire.blog.admin.service;
 
 import org.happyfire.blog.admin.model.params.PageParam;
+import org.happyfire.blog.admin.model.params.PasswordParam;
 import org.happyfire.blog.admin.pojo.Admin;
 import org.happyfire.blog.admin.pojo.Permission;
 import org.happyfire.blog.admin.vo.AdminVo;
@@ -21,5 +22,10 @@ public interface AdminService {
 
     Result addAdmin(AdminVo adminVo);
 
-    Result clearPassword(Long id);
+
+    Result getAdminInfo();
+
+    Result setPassword(Admin admin);
+
+//    Result changePassword(PasswordParam passwordParam);
 }

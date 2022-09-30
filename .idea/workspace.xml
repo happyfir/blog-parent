@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/model/params/PasswordParam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/pojo/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/pojo/Tag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/TagService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/Sys_userService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/Sys_userService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/Sys_userServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/Sys_userServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/static/changePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/changePassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/controller/adminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/controller/adminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/Sys_userService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/Sys_userService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/Sys_userServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/Sys_userServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/static/changePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/static/changePassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/LoginServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +121,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BlogApp">
+  <component name="RunManager" selected="Spring Boot.AdminApp">
     <configuration name="SecurityConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.happyfire.blog.admin.config.SecurityConfig" />
       <module name="blog-admin" />
@@ -147,8 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BlogApp" />
         <item itemvalue="Spring Boot.AdminApp" />
+        <item itemvalue="Spring Boot.BlogApp" />
         <item itemvalue="应用程序.SecurityConfig" />
         <item itemvalue="Spring Boot.BlogApp" />
         <item itemvalue="Spring Boot.AdminApp" />
@@ -198,7 +214,9 @@
       <workItem from="1664437884040" duration="11791000" />
       <workItem from="1664464392626" duration="2808000" />
       <workItem from="1664467225397" duration="162000" />
-      <workItem from="1664502396610" duration="1166000" />
+      <workItem from="1664502396610" duration="5021000" />
+      <workItem from="1664509382299" duration="1123000" />
+      <workItem from="1664511114348" duration="9025000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -382,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664467186361</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="添加了对分类、标签的管理功能">
+      <created>1664503828230</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1664503828230</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,6 +441,7 @@
     <MESSAGE value="对后台系统代码进行规范化" />
     <MESSAGE value="对后台用户进行管理" />
     <MESSAGE value="添加了对分类、标签的管理功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了对分类、标签的管理功能" />
+    <MESSAGE value="后台增加密码修功能 但是目前只能由admin用户修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台增加密码修功能 但是目前只能由admin用户修改" />
   </component>
 </project>

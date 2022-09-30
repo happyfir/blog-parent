@@ -61,12 +61,12 @@ public class Sys_userServiceImpl implements Sys_userService {
         return Result.success(null);
     }
 
-    @Override
-    public Result getUserInfo() {
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        User user = (User)principal;
-        return Result.success(user);
-    }
+//    @Override
+//    public Result getUserInfo() {
+//        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        User user = (User)principal;
+//        return Result.success(user);
+//    }
 
     @Override
     public List<Sys_user> findUserBynickName(String nickName) {

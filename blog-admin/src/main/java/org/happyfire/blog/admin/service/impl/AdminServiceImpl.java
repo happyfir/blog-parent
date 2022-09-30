@@ -8,6 +8,7 @@ import org.happyfire.blog.admin.mapper.AdminMapper;
 import org.happyfire.blog.admin.mapper.AdminPermissionMapper;
 import org.happyfire.blog.admin.mapper.PermissionMapper;
 import org.happyfire.blog.admin.model.params.PageParam;
+import org.happyfire.blog.admin.model.params.PasswordParam;
 import org.happyfire.blog.admin.pojo.Admin;
 import org.happyfire.blog.admin.pojo.AdminPermission;
 import org.happyfire.blog.admin.pojo.Permission;
@@ -17,6 +18,8 @@ import org.happyfire.blog.admin.vo.PageResult;
 import org.happyfire.blog.admin.vo.Result;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -134,24 +137,47 @@ public class AdminServiceImpl implements AdminService{
         return Result.success(null);
     }
 
+
+    @Override
+    public Result getAdminInfo() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = (User)principal;
+        return Result.success(user);
+    }
+
     /**
-     * 重置密码  重置后的密码为username（账号）
-     * @param id
+     * 设置密码
+     * @param admin
      * @return
      */
     @Override
-    public Result clearPassword(Long id) {
-        Admin admin = adminMapper.selectById(id);
-        String password = admin.getUsername();
-        //注册和登录时前端进行过一次md5加密 后端也进行次MD5加密
-        //模拟前端加密
-        password = DigestUtils.md5Hex(password);
-        //模拟后端加密
+    public Result setPassword(Admin admin) {
+        //TODO 如果更改的是当前账户密码 理应退出重新登录 但目前未实现
+        String password = admin.getPassword();
         String encode = passwordEncoder.encode(password);
         admin.setPassword(encode);
         adminMapper.updateById(admin);
         return Result.success(null);
     }
+
+//    @Override
+//    public Result changePassword(PasswordParam passwordParam) {
+//        LambdaQueryWrapper<Admin> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+//        String password = passwordEncoder.encode(passwordParam.getPassword());
+//        lambdaQueryWrapper.eq(Admin::getUsername,passwordParam.getUsername());
+//        Admin admin = adminMapper.selectOne(lambdaQueryWrapper);
+//        System.out.println("0000000000000000");
+//        System.out.println(admin);
+////        if (admin == null || (!password.equals(admin.getPassword()))){
+////            return Result.fail(-3,"密码输入错误");
+////        }
+//        String newPassword = passwordEncoder.encode(passwordParam.getNewPassword());
+//        admin.setPassword(newPassword);
+//        System.out.println("8888888888888888888");
+//        System.out.println(admin);
+//        adminMapper.updateById(admin);
+//        return Result.success(null);
+//    }
 
     private List<AdminVo> copyList(List<Admin> records){
         List<AdminVo> adminVoList = new ArrayList<>();

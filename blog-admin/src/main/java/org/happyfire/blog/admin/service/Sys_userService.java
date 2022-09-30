@@ -13,7 +13,7 @@ public interface Sys_userService {
 
     Result delete(Long id);
 
-    Result getUserInfo();
+//    Result getUserInfo();
 
     List<Sys_user> findUserBynickName(String condition);
 

@@ -40,9 +40,10 @@
                                 {{username}}
                             </div>
                             <el-dropdown-menu slot="dropdown">
-                                <el-dropdown-item divided>
-                                    <a style="display:block;" href="../changePassword.html">修改密码</a>
-                                </el-dropdown-item>
+<!--                                <el-dropdown-item divided>-->
+<!--                                    <a style="display:block;" href="../changePassword.html">修改密码</a>-->
+<!--                                    <el-button @click="handlePassword()">修改密码</el-button>-->
+<!--                                </el-dropdown-item>-->
                                 <el-dropdown-item divided>
                                         <a href="/logout"><span style="display:block;">退出</span></a>
                                     </el-dropdown-item>
@@ -72,21 +73,103 @@
                 </el-container>
             </el-container>
         </el-container>
+        <!--新增标签弹层-->
+        <div class="add-form">
+            <el-dialog title="新增" :visible.sync="dialogFormVisible">
+                <el-form :model="formData" :rules="rules" label-position="right" label-width="100px">
+                    <el-row>
+                        <el-col >
+                            <el-form-item label="账户" prop="username">
+                                <el-input  v-model="formData.username"/>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col >
+                            <el-form-item label="旧密码" prop="password">
+                                <el-input type="password"  v-model="formData.password"/>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col >
+                            <el-form-item label="新密码" prop="newPassword">
+                                <el-input type="password"  v-model="formData.newPassword"/>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col >
+                            <el-form-item label="确认密码" prop="rePassword">
+                                <el-input type="password"  v-model="formData.rePassword"/>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                </el-form>
+                <div slot="footer" class="dialog-footer">
+                    <el-button @click="dialogFormVisible = false">取消</el-button>
+                    <el-button type="primary" @click="ChangePassword()">确定</el-button>
+                </div>
+            </el-dialog>
+        </div>
     </div>
+
 </body>
 <!-- 引入组件库 -->
 <script src="../js/vue.js"></script>
 <script src="../plugins/elementui/index.js"></script>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script src="../js/axios-0.18.0.js"></script>
+<script src="../plugins/quill/vue-quill-editor.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 <script>
     new Vue({
         el: '#app',
         methods:{
             getUserInfo(){
-                axios.post("/user/userInfo").then((res)=>{
+                axios.post("/admin/adminInfo").then((res)=>{
                     this.username = res.data.data.username;
+                    this.formData.username = res.data.data.username;
                 })
+            },
+            // 重置表单
+            resetForm() {
+                this.formData = {
+                    username: '',
+                    password: '',
+                    newPassword: '',
+                    rePassword: ''
+                };
+                this.subjects = [];
+                this.tableData = {};
+            },
+            handlePassword() {
+                this.resetForm()
+                this.getUserInfo()
+                this.dialogFormVisible = true
+            },
+            ChangePassword() {
+                if (this.formData.newPassword !== this.formData.rePassword){
+                    this.$message.error("两次输入的密码不一致！请重新输入");
+                }
+                this.formData.password = md5(this.formData.password)
+                this.formData.newPassword = md5(this.formData.newPassword)
+                this.formData.rePassword = md5(this.formData.rePassword)
+
+                axios.post("/admin/changePassword",this.formData).then((res)=>{
+                    if (res.data.success){
+                        this.$message({
+                            message: '恭喜你，修改成功',
+                            type: 'success'
+                        });
+                        this.dialogFormVisible = false;
+                        this.findPage();
+                    }
+                }).catch((error)=>{
+                    if (error == "Error: Request failed with status code 403"){
+                        this.$message.error("无操作权限");
+                    }
+                });
             }
         },
         created() {
@@ -94,6 +177,19 @@
         },
         data:{
             username:"",
+            dialogFormVisible: false,
+            formData: {
+                username: '',
+                password: '',
+                newPassword: '',
+                rePassword: ''
+            },//表单数据
+            rules: {//校验规则
+                username: [{ required: false, message: '', trigger: 'blur' }],
+                password: [{ required: true, message: '必填项', trigger: 'blur' }],
+                newPassword: [{ required: true, message: '必填项', trigger: 'blur' }],
+                rePassword: [{ required: true, message: '必填项', trigger: 'blur' }],
+            },
             menuList:[
                 {
                     "path": "1",

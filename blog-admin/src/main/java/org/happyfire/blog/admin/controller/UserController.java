@@ -32,10 +32,10 @@ public class UserController {
         return sysUserService.delete(id);
     }
 
-    @PostMapping("userInfo")
-    public Result getUserInfo(){
-        return sysUserService.getUserInfo();
-    }
+//    @PostMapping("userInfo")
+//    public Result getUserInfo(){
+//        return sysUserService.getUserInfo();
+//    }
 
     @GetMapping("password/{id}")
     public Result clearPassword(@PathVariable("id") Long id){

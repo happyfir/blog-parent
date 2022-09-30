@@ -1,6 +1,7 @@
 package org.happyfire.blog.admin.controller;
 
 import org.happyfire.blog.admin.model.params.PageParam;
+import org.happyfire.blog.admin.model.params.PasswordParam;
 import org.happyfire.blog.admin.pojo.Admin;
 import org.happyfire.blog.admin.pojo.Permission;
 import org.happyfire.blog.admin.pojo.Sys_user;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 @Transactional
 public class AdminController {
 
+    //TODO  后续完善后台管理系统的权限管理功能
     @Autowired
     private AdminService adminService;
 
@@ -46,13 +48,24 @@ public class AdminController {
         return adminService.deleteById(id);
     }
 
+    @PostMapping("adminInfo")
+    public Result getAdminInfo(){
+        return adminService.getAdminInfo();
+    }
+
     /**
-     * 重置密码  重置后密码为username账户
-     * @param id
+     * 重置密码
+     * @param admin
      * @return
      */
-    @GetMapping("password/{id}")
-    public Result clearPassword(@PathVariable("id") Long id) {
-        return adminService.clearPassword(id);
+    @PostMapping("password")
+    public Result setPassword(@RequestBody Admin admin) {
+//        return adminService.clearPassword(id);
+        return adminService.setPassword(admin);
     }
+
+//    @PostMapping("changePassword")
+//    public Result changePassword(@RequestBody PasswordParam passwordParam){
+//        return adminService.changePassword(passwordParam);
+//    }
 }
