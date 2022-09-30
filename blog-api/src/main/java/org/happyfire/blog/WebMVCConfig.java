@@ -22,7 +22,7 @@ public class WebMVCConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        //TODO 后续需要是再配置
+        //TODO 后续需要使可以再配置
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/test")
                 .addPathPatterns("/comments/create/change")

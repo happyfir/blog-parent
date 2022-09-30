@@ -5,29 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/utils/QiniuUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/pojo/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/pojo/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/static/pages/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/controller/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/pojo/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/pojo/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/PermissionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/PermissionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/Sys_userServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/Sys_userServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/TagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/TagServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/pojo/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/pojo/Tag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/TagService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +105,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminApp">
+  <component name="RunManager" selected="Spring Boot.BlogApp">
     <configuration name="SecurityConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.happyfire.blog.admin.config.SecurityConfig" />
       <module name="blog-admin" />
@@ -167,9 +147,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.BlogApp" />
         <item itemvalue="Spring Boot.AdminApp" />
         <item itemvalue="应用程序.SecurityConfig" />
-        <item itemvalue="Spring Boot.BlogApp" />
         <item itemvalue="Spring Boot.BlogApp" />
         <item itemvalue="Spring Boot.AdminApp" />
       </list>
@@ -216,7 +196,9 @@
       <workItem from="1664325652184" duration="7231000" />
       <workItem from="1664339197432" duration="17594000" />
       <workItem from="1664437884040" duration="11791000" />
-      <workItem from="1664464392626" duration="2685000" />
+      <workItem from="1664464392626" duration="2808000" />
+      <workItem from="1664467225397" duration="162000" />
+      <workItem from="1664502396610" duration="1166000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -393,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664438426112</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="添加了对分类、标签的管理功能">
+      <created>1664467186361</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1664467186361</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,6 +415,7 @@
     <MESSAGE value="后台系统完善了文章管理功能中的搜索功能，添加对用户密码的重置功能" />
     <MESSAGE value="对后台系统代码进行规范化" />
     <MESSAGE value="对后台用户进行管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="对后台用户进行管理" />
+    <MESSAGE value="添加了对分类、标签的管理功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了对分类、标签的管理功能" />
   </component>
 </project>

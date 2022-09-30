@@ -26,6 +26,8 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     private RedisTemplate<String,String> redisTemplate;
 
+    private String DefaultAvatar = "http://rhzmlesrf.hb-bkt.clouddn.com/a47c9c65-dbc2-4604-bbb1-e3937532185b.jpg";
+
 //    private static final String slat = "mszlu!@#";
     private static final String slat = "happyfire";
 
@@ -108,7 +110,7 @@ public class LoginServiceImpl implements LoginService {
         sysUser.setPassword(DigestUtils.md5Hex(password+slat));
         sysUser.setCreateDate(System.currentTimeMillis());
         sysUser.setLastLogin(System.currentTimeMillis());
-        sysUser.setAvatar("");
+        sysUser.setAvatar(DefaultAvatar);
         sysUser.setAdmin(1); //1 为true
         sysUser.setDeleted(0); // 0 为false
         sysUser.setSalt("");
