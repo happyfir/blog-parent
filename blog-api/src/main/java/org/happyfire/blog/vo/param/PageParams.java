@@ -9,6 +9,7 @@ public class PageParams {
     private Long categoryId;
     private Long tagId;
     private String year;
+    private String condition;
     private String month;
     private Long authorId;
     public String getMonth(){

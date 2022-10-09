@@ -24,11 +24,16 @@ public class ArticleController {
      * @param pageParams
      * @return
      */
+    //TODO 修改redis 缓存
     @PostMapping
     @LogAnnotation(module = "文章", operation = "获取文章列表")
     @Cache(expire = 5 * 60 * 1000,name = "list_article")
     public Result listArticle(@RequestBody PageParams pageParams){
-        return articleService.listArticle(pageParams);
+        if (pageParams.getCondition() != null){
+            return articleService.searchArticles(pageParams);
+        }else {
+            return articleService.listArticle(pageParams);
+        }
     }
 
 
@@ -100,10 +105,10 @@ public class ArticleController {
      * @param searchParam
      * @return
      */
-    @PostMapping("search")
-    @Cache(expire = 5 * 60 * 1000,name = "search_articles")
-    public Result searchArticles(@RequestBody SearchParam searchParam){
-        return articleService.searchArticles(searchParam.getCondition());
-    }
+//    @PostMapping("search")
+//    @Cache(expire = 5 * 60 * 1000,name = "search_articles")
+//    public Result searchArticles(@RequestBody SearchParam searchParam){
+//        return articleService.searchArticles(searchParam.getCondition());
+//    }
 
 }

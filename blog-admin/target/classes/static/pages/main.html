@@ -123,6 +123,7 @@
 <script src="../plugins/quill/vue-quill-editor.js"></script>
 <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 <script>
+    //TODO  目前只有admin用户有权限获取当前登录用户信息 后续需改正 如getUserInfo()中的请求没有权限执行
     new Vue({
         el: '#app',
         methods:{

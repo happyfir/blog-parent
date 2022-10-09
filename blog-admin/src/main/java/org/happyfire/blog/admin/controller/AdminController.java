@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * 用户：admin
- * 密码：123456
+ * 密码：admin
  */
 
 @RestController

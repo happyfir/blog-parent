@@ -262,11 +262,13 @@ public class ArticleServiceImpl implements ArticleService {
      * 根据条件查询文章
      * TODO 目前的逻辑很简单 需要后期进行完善
      * TODO 如果条件允许 可以实现es查询
-     * @param condition
+     * @param pageParams
      * @return
      */
     @Override
-    public Result searchArticles(String condition) {
+    public Result searchArticles(PageParams pageParams) {
+        String condition = pageParams.getCondition();
+        Page<Article> page = new Page<>(pageParams.getPage(),pageParams.getPageSize());
         LambdaQueryWrapper<Article> searchQueryWrapper = new LambdaQueryWrapper<>();
         searchQueryWrapper.like(Article::getTitle,condition)
                 .or().like(Article::getSummary,condition);
@@ -292,9 +294,11 @@ public class ArticleServiceImpl implements ArticleService {
         for (ArticleTag articleTag : articleTagList) {
             searchQueryWrapper.or().like(Article::getId,articleTag.getArticleId());
         }
-
-        List<Article> articles = articleMapper.selectList(searchQueryWrapper);
-        return Result.success(copyList(articles,false,false));
+//        List<Article> articles = articleMapper.selectList(searchQueryWrapper);
+        //分页
+        Page<Article> articlePage = articleMapper.selectPage(page, searchQueryWrapper);
+        List<Article> articles = articlePage.getRecords();
+        return Result.success(copyList(articles,true,true));
     }
 
     /**

@@ -54,8 +54,8 @@ public interface ArticleService {
 
     /**
      * 查找文章
-     * @param search
+     * @param pageParams
      * @return
      */
-    Result searchArticles(String search);
+    Result searchArticles(PageParams pageParams);
 }
