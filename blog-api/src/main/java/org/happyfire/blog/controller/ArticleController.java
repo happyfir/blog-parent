@@ -24,15 +24,15 @@ public class ArticleController {
      * @param pageParams
      * @return
      */
-    //TODO 修改redis 缓存
     @PostMapping
     @LogAnnotation(module = "文章", operation = "获取文章列表")
     @Cache(expire = 5 * 60 * 1000,name = "list_article")
     public Result listArticle(@RequestBody PageParams pageParams){
-        if (pageParams.getCondition() != null){
-            return articleService.searchArticles(pageParams);
-        }else {
+        if (pageParams.getCondition() == null || "".equals(pageParams.getCondition())){
             return articleService.listArticle(pageParams);
+        }else {
+            //            return articleService.searchArticles(pageParams);
+            return articleService.searchArticlesByES(pageParams);
         }
     }
 

@@ -5,24 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/common/elasticsearch/RestClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/common/elasticsearch/impl/RestClientServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/config/elasticsearchConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/constants/BlogArticleConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-api/src/test/java/org/happyfire/blog/common/elasticsearch/CreatES.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/happyfire/blog/admin/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/org/happyfire/blog/admin/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/target/classes/static/pages/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/BlogApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/BlogApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/dao/mapper/ArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/dao/mapper/ArticleMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/vo/param/PageParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/vo/param/PageParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/vo/param/SearchParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/vo/param/SearchParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/resources/org.happyfire.blog.dao.mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/resources/org.happyfire.blog.dao.mapper/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org.happyfire.blog.dao.mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org.happyfire.blog.dao.mapper/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/BlogApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/BlogApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/common/cache/CacheAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/common/cache/CacheAspect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/dao/mapper/ArticleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/dao/mapper/ArticleMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ArticleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/vo/param/PageParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/vo/param/PageParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/vo/param/SearchParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/vo/param/SearchParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +37,8 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,6 +67,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
@@ -78,9 +82,10 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/Code/IDEAProjects/blog-parent/blog-api/src/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Code/IDEAProjects/blog-parent&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;fd134d8f1b8f152c394ece172c9c728e&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -121,15 +126,50 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.BlogApp">
-    <configuration name="SecurityConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.happyfire.blog.admin.config.SecurityConfig" />
-      <module name="blog-admin" />
+    <configuration name="CreatES.BulikRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.happyfire.blog.admin.config.*" />
+          <option name="PATTERN" value="org.happyfire.blog.common.elasticsearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.happyfire.blog.common.elasticsearch" />
+      <option name="MAIN_CLASS_NAME" value="org.happyfire.blog.common.elasticsearch.CreatES" />
+      <option name="METHOD_NAME" value="BulikRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreatES.creatBlogIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.happyfire.blog.common.elasticsearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.happyfire.blog.common.elasticsearch" />
+      <option name="MAIN_CLASS_NAME" value="org.happyfire.blog.common.elasticsearch.CreatES" />
+      <option name="METHOD_NAME" value="creatBlogIndex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreatES.createBlogArticleIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.happyfire.blog.common.elasticsearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.happyfire.blog.common.elasticsearch" />
+      <option name="MAIN_CLASS_NAME" value="org.happyfire.blog.common.elasticsearch.CreatES" />
+      <option name="METHOD_NAME" value="createBlogArticleIndex" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,9 +203,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.BlogApp" />
-        <item itemvalue="Spring Boot.AdminApp" />
-        <item itemvalue="应用程序.SecurityConfig" />
-        <item itemvalue="Spring Boot.BlogApp" />
+        <item itemvalue="JUnit.CreatES.creatBlogIndex" />
+        <item itemvalue="JUnit.CreatES.BulikRequest" />
+        <item itemvalue="JUnit.CreatES.createBlogArticleIndex" />
         <item itemvalue="Spring Boot.AdminApp" />
       </list>
     </recent_temporary>
@@ -236,7 +276,13 @@
       <workItem from="1665214780394" duration="3515000" />
       <workItem from="1665237561104" duration="3373000" />
       <workItem from="1665281521359" duration="4573000" />
-      <workItem from="1665303431138" duration="322000" />
+      <workItem from="1665303431138" duration="971000" />
+      <workItem from="1665368261463" duration="5335000" />
+      <workItem from="1665386037051" duration="8133000" />
+      <workItem from="1665397514934" duration="2066000" />
+      <workItem from="1665491133643" duration="1987000" />
+      <workItem from="1665494791225" duration="1479000" />
+      <workItem from="1665588947596" duration="712000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -434,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664531390853</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="修改了博客系统 搜索功能">
+      <created>1665303800925</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1665303800925</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,6 +522,17 @@
     <MESSAGE value="对后台用户进行管理" />
     <MESSAGE value="添加了对分类、标签的管理功能" />
     <MESSAGE value="后台增加密码修功能 但是目前只能由admin用户修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台增加密码修功能 但是目前只能由admin用户修改" />
+    <MESSAGE value="修改了博客系统 搜索功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了博客系统 搜索功能" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

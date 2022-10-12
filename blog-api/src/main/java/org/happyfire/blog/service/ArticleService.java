@@ -1,10 +1,12 @@
 package org.happyfire.blog.service;
 
+import org.happyfire.blog.dao.pojo.Article;
 import org.happyfire.blog.vo.Result;
 import org.happyfire.blog.vo.param.ArticleParam;
 import org.happyfire.blog.vo.param.PageParams;
 import org.springframework.context.annotation.Bean;
 
+import java.util.List;
 import java.util.Map;
 
 
@@ -58,4 +60,16 @@ public interface ArticleService {
      * @return
      */
     Result searchArticles(PageParams pageParams);
+
+    /**
+     * 使用ES查询文章
+     * @param pageParams
+     * @return
+     */
+    Result searchArticlesByES(PageParams pageParams);
+
+    /**
+     * 搜索所有文章  用于给ES索引库批量导入数据
+     */
+    List<Article> listArticles();
 }

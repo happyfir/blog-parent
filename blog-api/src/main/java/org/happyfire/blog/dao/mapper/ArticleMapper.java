@@ -19,4 +19,10 @@ public interface ArticleMapper extends BaseMapper<Article> {
                                String year,
                                String month,
                                Long authorId);
+
+    /**
+     * 获取所有文章
+     * @return
+     */
+    List<Article> listArticles();
 }

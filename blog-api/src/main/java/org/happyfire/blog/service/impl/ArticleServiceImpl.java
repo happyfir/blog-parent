@@ -3,9 +3,8 @@ package org.happyfire.blog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mysql.cj.log.Log;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
+import org.happyfire.blog.common.elasticsearch.RestClientService;
 import org.happyfire.blog.dao.dos.Archives;
 import org.happyfire.blog.dao.mapper.*;
 import org.happyfire.blog.dao.pojo.*;
@@ -46,6 +45,8 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleTagMapper articleTagMapper;
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
+    @Autowired
+    private RestClientService restClientService;
 
     /**
      * 分页查询article数据表
@@ -299,6 +300,28 @@ public class ArticleServiceImpl implements ArticleService {
         Page<Article> articlePage = articleMapper.selectPage(page, searchQueryWrapper);
         List<Article> articles = articlePage.getRecords();
         return Result.success(copyList(articles,true,true));
+    }
+
+    /**
+     * 使用ES查询文章
+     * @param pageParams
+     * @return
+     */
+    //TODO 暂时不支持依照类别、标签和作者查询只能依据标题和文章摘要查询
+    @Override
+    public Result searchArticlesByES(PageParams pageParams) {
+        List<Article> articles = restClientService.search(pageParams);
+        return Result.success(copyList(articles,true,true));
+    }
+
+
+    /**
+     * 获取所有文章
+     * @return
+     */
+    @Override
+    public List<Article> listArticles() {
+        return articleMapper.listArticles();
     }
 
     /**

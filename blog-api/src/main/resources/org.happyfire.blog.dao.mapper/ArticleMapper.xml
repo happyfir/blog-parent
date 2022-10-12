@@ -11,6 +11,10 @@
         select year(FROM_UNIXTIME(create_date/1000)) year,month(FROM_UNIXTIME(create_date/1000)) month, count(*) count from ms_article where deleted = 0 group by year,month order by create_date desc
     </select>
 
+    <select id="listArticles" resultType="org.happyfire.blog.dao.pojo.Article">
+        select * from ms_article
+    </select>
+
     <resultMap id="articleMap" type="org.happyfire.blog.dao.pojo.Article">
         <id column="id" property="id" />
         <result column="author_id" property="authorId"/>
