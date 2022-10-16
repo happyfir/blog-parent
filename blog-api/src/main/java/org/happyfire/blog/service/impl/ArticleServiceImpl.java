@@ -308,6 +308,8 @@ public class ArticleServiceImpl implements ArticleService {
      * @return
      */
     //TODO 暂时不支持依照类别、标签和作者查询只能依据标题和文章摘要查询
+    //TODO 想法再创建类别 标签索引库 调用三次查询
+    //TODO 新建一个实体类 包含类别 标签 作者名字 但需要考虑后续数据同步时如何实现
     @Override
     public Result searchArticlesByES(PageParams pageParams) {
         List<Article> articles = restClientService.search(pageParams);

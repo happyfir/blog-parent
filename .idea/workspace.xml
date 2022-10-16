@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/common/elasticsearch/RestClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/common/elasticsearch/impl/RestClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/config/elasticsearchConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/constants/BlogArticleConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-api/src/test/java/org/happyfire/blog/common/elasticsearch/CreatES.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/BlogApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/BlogApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/dao/mapper/ArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/dao/mapper/ArticleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/config/elasticsearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/config/elasticsearchConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/resources/org.happyfire.blog.dao.mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/resources/org.happyfire.blog.dao.mapper/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org.happyfire.blog.dao.mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org.happyfire.blog.dao.mapper/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/BlogApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/BlogApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/common/cache/CacheAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/common/cache/CacheAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/config/elasticsearchConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/config/elasticsearchConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/dao/mapper/ArticleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/dao/mapper/ArticleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/ArticleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +74,7 @@
     &quot;last_directory_selection&quot;: &quot;D:/Code/IDEAProjects/blog-parent/blog-api/src/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Code/IDEAProjects/blog-parent&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;fd134d8f1b8f152c394ece172c9c728e&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -282,7 +271,21 @@
       <workItem from="1665397514934" duration="2066000" />
       <workItem from="1665491133643" duration="1987000" />
       <workItem from="1665494791225" duration="1479000" />
-      <workItem from="1665588947596" duration="712000" />
+      <workItem from="1665588947596" duration="1100000" />
+      <workItem from="1665590550720" duration="35000" />
+      <workItem from="1665670432473" duration="914000" />
+      <workItem from="1665671378813" duration="25000" />
+      <workItem from="1665671612286" duration="80000" />
+      <workItem from="1665671701907" duration="87000" />
+      <workItem from="1665672768105" duration="87000" />
+      <workItem from="1665676835580" duration="3345000" />
+      <workItem from="1665763603722" duration="2876000" />
+      <workItem from="1665915677568" duration="1607000" />
+      <workItem from="1665923495335" duration="4245000" />
+      <workItem from="1665932383269" duration="1262000" />
+      <workItem from="1665937295360" duration="1636000" />
+      <workItem from="1665951005863" duration="1917000" />
+      <workItem from="1665953001135" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -487,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665303800925</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="修改了博客系统搜索功能，改为使用Elasticsearch实现搜索功能">
+      <created>1665589730665</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1665589730665</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +533,8 @@
     <MESSAGE value="添加了对分类、标签的管理功能" />
     <MESSAGE value="后台增加密码修功能 但是目前只能由admin用户修改" />
     <MESSAGE value="修改了博客系统 搜索功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了博客系统 搜索功能" />
+    <MESSAGE value="修改了博客系统搜索功能，改为使用Elasticsearch实现搜索功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了博客系统搜索功能，改为使用Elasticsearch实现搜索功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
