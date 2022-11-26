@@ -77,7 +77,6 @@ UserController:获取当前用户新、修改用户信息、修改用户密码
 
 开发时，把各种服务部署在cenyos7服务器上，使用docker部署mysql、elasticsearch、canal、canal-adapter
 
-部署过程复杂，详见《部署》
 
 ## 五、参数配置
 
@@ -92,7 +91,7 @@ spring:
   datasource:
     url: #数据库url
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root  #账户
+    username:   #账户
     password:  #密码
   redis:
     host: localhost #redis服务地址
@@ -125,7 +124,7 @@ spring:
   datasource:
     url: #数据库url
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root #账户
+    username: #账户
     password: #密码
   redis:
     host: localhost #redis服务地址
