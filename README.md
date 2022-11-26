@@ -143,6 +143,6 @@ mybatis-plus:
   mapper-locations: classpath:org.happyfire.blog.dao.mapper/*.xml
 
 qiniu: #存储图片的云服务器，我采用的七牛云 ，使用了官方提供的工具类 下面是我的key 这部分可以自己更改设置
-  accessKey: IUiEb93jt_k9yu0yRiGq6uYywOg42CHooPA7ArP9
-  accessSecretKey: -R5D3gPRz0Vbx_J5gXgJukNeGB2Y_H8XcsRCxiEX
+  accessKey: 
+  accessSecretKey: 
 ```
