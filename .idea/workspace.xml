@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/test/java/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4eaaf4cc-2758-44ee-95ea-4b6dd78d71d2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4eaaf4cc-2758-44ee-95ea-4b6dd78d71d2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/resources/pictures/049a7740-f95a-4882-921d-698adfd91279.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/config/elasticsearchConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/config/elasticsearchConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/pictures/049a7740-f95a-4882-921d-698adfd91279.jpg" beforeDir="false" />
+    <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="添加项目说明">
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/config/ThreadPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/config/ThreadPoolConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +63,7 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_directory_selection": "D:/Code/IDEAProjects/blog-parent/blog-api/src/test/java",
-    "last_opened_file_path": "D:/Code/IDEAProjects/test",
+    "last_opened_file_path": "D:/Code/IDEAProjects/blog-parent",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -380,6 +370,7 @@
       <workItem from="1677983430262" duration="36000" />
       <workItem from="1679729513419" duration="2809000" />
       <workItem from="1679741908337" duration="17000" />
+      <workItem from="1679756641408" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -598,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665953887024</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="添加项目说明">
+      <created>1679756921805</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1679756921805</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
