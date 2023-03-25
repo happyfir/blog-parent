@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b1d7c6-bf95-40cd-8443-801453198087" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/test/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4eaaf4cc-2758-44ee-95ea-4b6dd78d71d2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4eaaf4cc-2758-44ee-95ea-4b6dd78d71d2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/config/elasticsearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/config/elasticsearchConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/src/main/java/org/happyfire/blog/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/src/main/resources/pictures/049a7740-f95a-4882-921d-698adfd91279.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/config/elasticsearchConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/config/elasticsearchConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api/target/classes/org/happyfire/blog/service/impl/ArticleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api/target/classes/pictures/049a7740-f95a-4882-921d-698adfd91279.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\Environment\maven-repository" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -56,39 +58,43 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_directory_selection&quot;: &quot;D:/Code/IDEAProjects/blog-parent/blog-api/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code/IDEAProjects/blog-parent&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;fd134d8f1b8f152c394ece172c9c728e&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_directory_selection": "D:/Code/IDEAProjects/blog-parent/blog-api/src/test/java",
+    "last_opened_file_path": "D:/Code/IDEAProjects/test",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "spring.configuration.checksum": "fd134d8f1b8f152c394ece172c9c728e",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "mariadb"
     ],
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -285,7 +291,95 @@
       <workItem from="1665932383269" duration="1262000" />
       <workItem from="1665937295360" duration="1636000" />
       <workItem from="1665951005863" duration="1917000" />
-      <workItem from="1665953001135" duration="670000" />
+      <workItem from="1665953001135" duration="981000" />
+      <workItem from="1665954502007" duration="163000" />
+      <workItem from="1665959125679" duration="979000" />
+      <workItem from="1666068297062" duration="7588000" />
+      <workItem from="1666179807374" duration="7958000" />
+      <workItem from="1666233903129" duration="5822000" />
+      <workItem from="1666257222780" duration="2239000" />
+      <workItem from="1666326292933" duration="1387000" />
+      <workItem from="1666327820847" duration="143000" />
+      <workItem from="1666327996340" duration="743000" />
+      <workItem from="1666406831322" duration="304000" />
+      <workItem from="1666454642006" duration="629000" />
+      <workItem from="1666526270830" duration="5671000" />
+      <workItem from="1666714721897" duration="100000" />
+      <workItem from="1666787691209" duration="7635000" />
+      <workItem from="1666800921032" duration="706000" />
+      <workItem from="1666837010945" duration="11232000" />
+      <workItem from="1666868946373" duration="2166000" />
+      <workItem from="1666884393231" duration="1801000" />
+      <workItem from="1666887283247" duration="426000" />
+      <workItem from="1666931083326" duration="1297000" />
+      <workItem from="1666932395757" duration="1004000" />
+      <workItem from="1666939514412" duration="622000" />
+      <workItem from="1666970419005" duration="2814000" />
+      <workItem from="1666973888390" duration="609000" />
+      <workItem from="1667008276597" duration="3975000" />
+      <workItem from="1667012273149" duration="802000" />
+      <workItem from="1667028548343" duration="4346000" />
+      <workItem from="1667091505230" duration="6521000" />
+      <workItem from="1667130317530" duration="7101000" />
+      <workItem from="1667188816874" duration="1106000" />
+      <workItem from="1667215397490" duration="5403000" />
+      <workItem from="1667223026993" duration="4298000" />
+      <workItem from="1667275966502" duration="1584000" />
+      <workItem from="1667292060111" duration="5245000" />
+      <workItem from="1667319382782" duration="190000" />
+      <workItem from="1667355173594" duration="7178000" />
+      <workItem from="1667392786949" duration="9104000" />
+      <workItem from="1667465915350" duration="12068000" />
+      <workItem from="1667524190108" duration="1686000" />
+      <workItem from="1667527684656" duration="9610000" />
+      <workItem from="1667611538188" duration="10664000" />
+      <workItem from="1667661687327" duration="2049000" />
+      <workItem from="1667699029844" duration="4153000" />
+      <workItem from="1667782622565" duration="3262000" />
+      <workItem from="1667820990357" duration="2962000" />
+      <workItem from="1667826913182" duration="3944000" />
+      <workItem from="1667870320408" duration="7594000" />
+      <workItem from="1667958130176" duration="842000" />
+      <workItem from="1667959322738" duration="5270000" />
+      <workItem from="1668008537509" duration="1780000" />
+      <workItem from="1668042953075" duration="1507000" />
+      <workItem from="1668131221338" duration="5307000" />
+      <workItem from="1668176341414" duration="3051000" />
+      <workItem from="1668180724230" duration="2116000" />
+      <workItem from="1668225929311" duration="1544000" />
+      <workItem from="1668337385774" duration="2404000" />
+      <workItem from="1668397686504" duration="2426000" />
+      <workItem from="1668400597338" duration="312000" />
+      <workItem from="1668474796978" duration="2714000" />
+      <workItem from="1668528435263" duration="1905000" />
+      <workItem from="1668571702793" duration="1869000" />
+      <workItem from="1668615241775" duration="1382000" />
+      <workItem from="1668701626604" duration="243000" />
+      <workItem from="1668762372189" duration="2606000" />
+      <workItem from="1668821314417" duration="5799000" />
+      <workItem from="1668873943320" duration="2234000" />
+      <workItem from="1669175985584" duration="1796000" />
+      <workItem from="1669213479197" duration="6256000" />
+      <workItem from="1669301927990" duration="56000" />
+      <workItem from="1669455594484" duration="777000" />
+      <workItem from="1669476979797" duration="76000" />
+      <workItem from="1671001448530" duration="343000" />
+      <workItem from="1671584669801" duration="40000" />
+      <workItem from="1672300964208" duration="1462000" />
+      <workItem from="1672302973849" duration="12000" />
+      <workItem from="1673181790272" duration="2181000" />
+      <workItem from="1673230875218" duration="2008000" />
+      <workItem from="1673332781475" duration="24000" />
+      <workItem from="1674031431525" duration="1301000" />
+      <workItem from="1674035270998" duration="9000" />
+      <workItem from="1675157413837" duration="2489000" />
+      <workItem from="1675220380622" duration="17000" />
+      <workItem from="1675307432785" duration="3943000" />
+      <workItem from="1675326921144" duration="16000" />
+      <workItem from="1677916896790" duration="288000" />
+      <workItem from="1677983430262" duration="36000" />
+      <workItem from="1679729513419" duration="2809000" />
+      <workItem from="1679741908337" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1663380601643</created>
@@ -497,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665589730665</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="添加项目说明">
+      <created>1665953887024</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1665953887024</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +635,8 @@
     <MESSAGE value="后台增加密码修功能 但是目前只能由admin用户修改" />
     <MESSAGE value="修改了博客系统 搜索功能" />
     <MESSAGE value="修改了博客系统搜索功能，改为使用Elasticsearch实现搜索功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了博客系统搜索功能，改为使用Elasticsearch实现搜索功能" />
+    <MESSAGE value="添加项目说明" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加项目说明" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -545,5 +647,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
